@@ -1,13 +1,105 @@
 <!DOCTYPE html>
+<!-- setup html basis -->
+<html lang="fr">
 
 <head>
-    <link rel="stylesheet" href="sass/main.css" />
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place this data between the <head> tags of your website -->
+    <meta name="description" content="" />
+
+    <!-- setup social-medias content -->
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+    <!-- Open Graph data -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+
+    <!-- setup css stylesheet url -->
+
+    <link rel="stylesheet" href="public/css/main.css" />
+
+    <!-- setup fontawesome api -->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>Ohmyfood</title>
 </head>
-<html>
+<header class="header">
+    <h1 class="header__heading">
+        ohmyfood
+    </h1>
+</header>
+<form action="#" method="POST" class="search-form">
+<div class="search-form__container">
+    <i class="fa fa-map-marker-alt fa-lg search-form__map-pin"></i>
+    <input type="text" name="city" placeholder="Paris, Belleville" />
+</div>
+</form>
+<section class="pesentation">
+<h2 class="presentation__heading">
+    Réservez le menu qui vous convient
+</h2>
+<h3 class="presentation__byline">
+    Découvrez des restaurants d'exception, séléctionnés par nos soins.
+</h3>
+<button class="presentation__btn">
+    Explorer nos resrtaurants
+</button>
+</section>
+<section>
+    <h2>
+      fonctionnement  
+    </h2>
+    <ul>
+        <li>
+            <i class="fas fa-mobile-alt"></i>
+            <p>Choisissez un restaurant</p>
+        </li>
+        <li>
+            <i class="fas fa-list"></i>
+            <p>Composez votre menu</p>
+        </li>
+        <li>
+            <i class="fa fa-store"></i>
+            <p>Dégustez au restaurant</p>
+        </li>
+    </ul>
+</section>
+<main class="restaurant-grid">
+    <div class="reaturant-grid__heading">
+        <h2>
+            Restaurants
+        </h2>
+    </div>
+    <section class="restaurant-prev">
+            <div class="resaurant-prev__img">
+                <img src="public/img/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" />
+            <div class="restaurant-prev__new">
+                <p class="restaurant-prev__label">Nouveau</p>
+            </div>
+            </div>
+            <div class="restaurant-prev__infos">
+                <div class="restaurant-prev__heading">
+                <h3 class="restaurant-prev__title">
+                    La palette du goût
+                </h3>
+                <p class="restaurant-prev__byline">Ménilmontant</p>
+            </div>
+                <div class="restaurant-prev__like restaurant-prev__like--active">
+                    <i class="far fa-heart"></i>
+                </div>
+        </div>
 
-<body>
-    <h1 class="niche"> salut</h1>
-    <h1 class="niche--grotte"> salut</h1>
-</body>
-
-</html>
+    </section>
+    
+</main>

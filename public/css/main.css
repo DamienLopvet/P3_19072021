@@ -1,8 +1,10 @@
-.niche {
-  font-size: 25px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+h1 {
+  font-family: shrikhand;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
-
-.niche--grotte {
-  color: pink;
-  font-size: 20px;
+h2{
+  font-family: roboto;
+  font-weight: 100;
 }
