@@ -1,3 +1,25 @@
-$colour-primary:#9356DC;
-$colour-secondary:#FF79DA;
-$colour-tertiary:#99E2D0;
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$color-bck-grd-white:#ffff;
+$color-bck-grd-dark:#eaeaea;
+$color-bck-grd-light:#f6f6f6;
+
+/* font */
+$head-foot-font: 'Shrikhand', sans-serif;
+$content-font: 'roboto', sans-serif;
+
+/* font-size and weight*/
+$head-size: 1.7rem;
+
+
+
+/* shadows*/
+$head-shade: 0px 0px 15px -4px black;
+
+/* Media queries */
+$breakpoints: (
+    small: 499px,
+    middle: 768px,
+    large: 1024px
+)

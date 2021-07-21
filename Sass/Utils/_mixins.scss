@@ -1,0 +1,31 @@
+ 
+ /* Media queries */
+@mixin smallScreen{
+    @media screen and (min-width: map-get($breakpoints, small)){
+        @content;
+    }
+}
+@mixin middleScreen{
+    @media screen and (min-width: map-get($breakpoints, middle)){
+        @content;
+    }
+}
+@mixin largeScreen{
+    @media screen and (min-width: map-get($breakpoints, large)){
+        @content;
+    }
+}
+
+/* font properties*/
+@mixin p-bold{
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+@mixin h2-style {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+@mixin h1-style {
+    font-size: 1rem;
+    font-weight: 300;
+}
