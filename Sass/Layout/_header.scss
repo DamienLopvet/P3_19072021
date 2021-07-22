@@ -2,8 +2,8 @@ header {
     display: block;
     font-family: $head-foot-font;
     text-align: center;
-    font-size: $head-size;
-    background-color: $color-bck-grd-white;
-    box-shadow: $head-shade;
-    padding: 15px 0px
+    font-size: $header-size;
+    background-color: $color-white;
+    padding-top: 15px;
+    padding-bottom: 5px;
 }

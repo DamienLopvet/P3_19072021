@@ -20,12 +20,56 @@
 @mixin p-bold{
     font-size: 0.8rem;
     font-weight: 700;
-}
+} 
 @mixin h2-style {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 900;
+    margin:$h2-Head;
+    padding-top:12%;
+    
 }
 @mixin h1-style {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 300;
+    margin: 0% 0 5% 0;
+}
+@mixin h3-style {
+    font-size: 0.9rem;
+}
+
+/* home button gradient properties*/
+@mixin gradient-HP {
+    background: rgb(147,86,220);
+background: -moz-linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+background: -webkit-linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+background: linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+}
+
+/*li .operation*/
+@mixin operate-li{
+    background-color: $color-bck-grd-light;
+    margin: 8% 6% 8% 8%;
+    padding: 7%;
+    border-radius: 20px;
+    box-shadow: $operate-shade;  
+    counter-increment: number;
+    list-style-type: none;
+}
+@mixin counter-li-HP{
+    content: counter(number) " ";
+    position: absolute;
+    left: 18px;
+    background-color: #9356DC;
+    border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    color: #ffff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 4px 3px 0px 2px;
+}
+@mixin operate-hov {
+    cursor:pointer;
+    background-color: $color-primary-lighten;
 }
