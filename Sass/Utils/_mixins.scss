@@ -21,30 +21,47 @@
     font-size: 0.8rem;
     font-weight: 700;
 } 
-@mixin h2-style {
-    font-size: 1.3rem;
+@mixin HP-h2-style {
+    font-size: 1.2rem;
     font-weight: 900;
     margin:$h2-Head;
     padding-top:12%;
     
 }
-@mixin h1-style {
+@mixin HP-h1-style {
     font-size: 0.9rem;
     font-weight: 300;
     margin: 0% 0 5% 0;
 }
-@mixin h3-style {
-    font-size: 0.9rem;
+@mixin menu-h1-style{
+    font-family: $head-foot-font;
+    font-weight: 500;
+    font-size: 1.3rem;
+
+}
+
+@mixin h2-menu-style {
+    font-weight: 400;
+    font-size:0.75rem;
+    text-transform: uppercase;
+    margin-top: 7%;
+    
 }
 
 /* home button gradient properties*/
-@mixin gradient-HP {
+@mixin gradient-primary {
     background: rgb(147,86,220);
-background: -moz-linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-background: -webkit-linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 background: linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
 }
+@mixin heart-gradient{
+    background: rgb(147,86,220);
+    background: -webkit-linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 /*li .operation*/
 @mixin operate-li{

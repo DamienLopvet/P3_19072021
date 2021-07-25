@@ -12,26 +12,17 @@
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, a, ::placeholder {
+h1, h2, h3, h5, h6, p, span, a, ::placeholder {
   font-family: "Roboto", sans-serif;
   color: black;
 }
 
-h2 {
-  font-size: 1.3rem;
-  font-weight: 900;
-  margin: 0% 5% 5% 5%;
-  padding-top: 12%;
-}
-
-h1 {
-  font-size: 0.9rem;
-  font-weight: 300;
-  margin: 0% 0 5% 0;
-}
-
 h3 {
   font-size: 0.9rem;
+}
+
+p {
+  font-size: 0.8rem;
 }
 
 button {
@@ -59,15 +50,29 @@ button {
 }
 
 .presentation h2 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin: 0% 5% 5% 5%;
+  padding-top: 12%;
   order: 0;
 }
 
 .presentation h1 {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 0% 0 5% 0;
   order: 1;
 }
 
 .operation {
   margin-bottom: 20%;
+}
+
+.operation h2 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin: 0% 5% 5% 5%;
+  padding-top: 12%;
 }
 
 .operation li {
@@ -110,15 +115,27 @@ button {
 
 .restaurant-grid {
   background-color: #f6f6f6;
+  padding-bottom: 30px;
+}
+
+.restaurant-grid h2 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin: 0% 5% 5% 5%;
+  padding-top: 12%;
 }
 
 .restaurant-grid article {
   display: flex;
   flex-flow: row wrap;
   margin: 7%;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   position: relative;
+}
+
+.restaurant-grid article > div {
+  margin: -2px;
 }
 
 .restaurant-grid .label-new {
@@ -148,16 +165,132 @@ button {
 
 .restaurant-grid__infos i {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 20px;
+  right: 20px;
   font-weight: 300;
+}
+
+.restaurant-grid__infos i:before {
+  font-size: 1.2rem;
+}
+
+.restaurant-grid__infos i:hover::before {
+  font-weight: 900;
+  background: #9356dc;
+  background: -webkit-linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header i:before {
+  position: absolute;
+  left: 20px;
+  top: 26px;
+  font-size: 1rem;
+}
+
+img {
+  aspect-ratio: 4/3;
+  width: 100%;
+  filter: brightness(90%);
+}
+
+.menu {
+  padding: 9% 7%;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-top: -50px;
+  position: absolute;
+  background-color: #f6f6f6;
+  width: 86%;
+}
+
+.menu h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.menu .fa-heart {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  font-weight: 300;
+}
+
+.menu .fa-heart:before {
+  font-size: 1.2rem;
+}
+
+.menu .fa-heart:hover::before {
+  font-weight: 900;
+  background: #9356dc;
+  background: -webkit-linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu h2 {
+  font-weight: 400;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-top: 7%;
+}
+
+.menu h2::after {
+  display: inline-block;
+  border-bottom: 3px solid #99E2D0;
+}
+
+footer {
+  background-color: #353535;
+  color: #ffff;
+  padding: 8%;
+  padding-bottom: 40px;
+}
+
+footer h4 {
+  color: #ffff;
+  font-family: Shrikhand;
+  margin-bottom: 10px;
+  font-weight: 100;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  font-size: 0.8rem;
+  padding-top: 8px;
+  font-family: roboto;
+  font-weight: 300;
+}
+
+footer ul li:first-child, footer ul li:nth-child(2) {
+  font-weight: 400;
+}
+
+footer ul i {
+  padding-right: 5px;
+}
+
+footer ul li:first-child i {
+  margin-right: 8px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffff;
 }
 
 header {
   display: block;
   font-family: "Shrikhand", sans-serif;
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   background-color: #ffff;
   padding-top: 15px;
   padding-bottom: 5px;
@@ -174,6 +307,23 @@ header {
   border: none;
   background-color: #eaeaea;
   padding: 0 10px;
+  width: 150px;
+}
+
+.search-form input:focus {
+  outline: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.search-form input:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
+}
+
+.search-form input:hover::placeholder {
+  opacity: 20%;
+  -moz-transition-duration: 0.4s;
 }
 
 .search-form i {
@@ -183,4 +333,5 @@ header {
 input::placeholder {
   font-size: 0.8rem;
   font-weight: 700;
+  -webkit-transition: opacity 0.35s ease-in-out;
 }

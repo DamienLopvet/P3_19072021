@@ -1,0 +1,38 @@
+footer{
+    background-color: $color-footer;
+    color: $color-white;
+    padding: 8%;
+    padding-bottom: 40px;
+    
+    & h4{
+        color: $color-white;
+        font-family:Shrikhand;
+        margin-bottom: 10px;
+        font-weight: 100;
+    }
+    & ul{
+        list-style-type: none;
+        & li{
+            font-size: 0.8rem;
+            padding-top:8px;
+            font-family: roboto;
+            font-weight: 300;
+            
+        }
+    & li:first-child, li:nth-child(2) {
+        font-weight: 400;
+
+
+    }
+    & i{
+        padding-right: 5px;
+    }
+    & li:first-child i{
+        margin-right:8px;
+    }
+}
+    & a{
+        text-decoration: none;
+        color: $color-white
+    }
+}

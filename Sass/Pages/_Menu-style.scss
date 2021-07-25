@@ -1,0 +1,44 @@
+header i:before{
+    position: absolute;
+    left: 20px;
+    top: 26px;
+    font-size: 1rem;
+}
+img{
+    aspect-ratio: 4/3;
+    width: 100%;
+    filter: brightness(90%);
+}
+.menu{
+    padding:9% 7%;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-top: -50px;
+    position: absolute;
+    background-color: $color-bck-grd-light;
+    width: 86%;
+    & h1{
+        @include menu-h1-style; }
+    & .fa-heart{
+        position: absolute;
+        top:40px;
+        right:30px;
+        font-weight: 300;
+        &:before{
+            font-size: 1.2rem;
+        }
+    &:hover::before{
+        font-weight: 900;
+        @include heart-gradient;
+    }
+   
+}
+    & h2{
+        @include h2-menu-style;
+        &::after{
+            display: inline-block;
+            border-bottom: 3px solid $color-tertiary;
+
+        }
+    }
+}

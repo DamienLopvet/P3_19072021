@@ -6,23 +6,29 @@
     padding: 0 20px 20px 20px;
     text-align: center;
     & h2{
+        @include HP-h2-style;
         order:0;
     }
     & h1{
+        @include HP-h1-style;
         order:1;
     }
 }
 .operation{
     margin-bottom: 20%;
+    & h2{
+        @include HP-h2-style;
+
+    }
     & li{
         @include operate-li;
     &::before {
-        @include counter-li-HP
+        @include counter-li-HP;
       }
     &:hover{
         @include operate-hov;
     & i{
-        color:$color-primary
+        color:$color-primary;
     }
     }
     }
@@ -34,13 +40,20 @@
 
 .restaurant-grid{
     background-color: $color-bck-grd-light;
+    padding-bottom: 30px;
+    & h2{
+        @include HP-h2-style;
+    }
     & article{
         display: flex;
         flex-flow: row wrap;
         margin:7%;
-        border-radius: 20px;
+        border-radius: 15px;
         overflow: hidden;
         position: relative;
+    & > div{
+        margin:-2px;
+    }
     }
     & .label-new{
         position: absolute;
@@ -67,9 +80,16 @@
     
         & i{
         position: absolute;
-        top:5px;
-        right:5px;
+        top:20px;
+        right:20px;
         font-weight: 300;
+        &:before{
+            font-size: 1.2rem;
+        }
+    &:hover::before{
+        font-weight: 900;
+        @include heart-gradient;
+    }
     }
     }
 

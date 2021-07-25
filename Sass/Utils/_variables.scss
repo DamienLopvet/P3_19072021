@@ -6,6 +6,7 @@ $color-white:#ffff;
 $color-bck-grd-dark:#eaeaea;
 $color-bck-grd-light:#f6f6f6;
 $color-primary-lighten: lighten($color-primary, 35%);
+$color-footer: #353535;
 $color-i-operate:grey;
 
 /* font */
@@ -13,8 +14,8 @@ $head-foot-font: 'Shrikhand', sans-serif;
 $content-font: 'roboto', sans-serif;
 
 /* font-size and weight*/
-$header-size: 1.7rem;
-
+$header-size: 1.5rem;
+$h3-size: 0.9rem;
 $h2-Head: 0% 5% 5% 5%;
 
 

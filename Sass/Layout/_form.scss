@@ -7,12 +7,29 @@
         border:none;
         background-color: $color-bck-grd-dark;
         padding: 0 10px;
+        width: 150px;
+        &:focus{
+            outline: none;
+            @include p-bold
+        &::placeholder{
+            opacity: 0;
+            -webkit-transition: opacity 0.35s ease-in-out;
+            transition: opacity 0.35s ease-in-out;
+        }
+        }
     
+    &:hover::placeholder{
+        opacity: 20%;
+        -moz-transition-duration: 0.4s; 
+        
     }
+}
     & i{
         font-size: 1rem;
     }
 }
 input::placeholder{
     @include p-bold;
+    -webkit-transition: opacity 0.35s ease-in-out;
 }
+   
