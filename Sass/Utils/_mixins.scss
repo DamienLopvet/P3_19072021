@@ -22,38 +22,45 @@
     font-weight: 700;
 } 
 @mixin HP-h2-style {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 900;
     margin:$h2-Head;
-    padding-top:12%;
+    padding:40px 15px 0 10px;
     
 }
 @mixin HP-h1-style {
     font-size: 0.9rem;
     font-weight: 300;
-    margin: 0% 0 5% 0;
+    margin: 0 0 15px 0;
 }
 @mixin menu-h1-style{
     font-family: $head-foot-font;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    padding-left: 25px;
 
 }
 
 @mixin h2-menu-style {
     font-weight: 400;
-    font-size:0.75rem;
+    font-size:0.8rem;
     text-transform: uppercase;
-    margin-top: 7%;
+    margin-top: 50px;
+    padding-left: 35px;
     
 }
 
-/* home button gradient properties*/
+/* gradient properties*/
 @mixin gradient-primary {
-    background: rgb(147,86,220);
+   
 background: linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
 }
+@mixin gradient-primary-hover{
+    background: linear-gradient(10deg, rgba(147,86,220,1) 10%, rgba(255,121,218,1) 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+}
+
 @mixin heart-gradient{
     background: rgb(147,86,220);
     background: -webkit-linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
@@ -63,13 +70,14 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endCo
 }
 
 
+
 /*li .operation*/
 @mixin operate-li{
     background-color: $color-bck-grd-light;
-    margin: 8% 6% 8% 8%;
-    padding: 7%;
+    margin: 20px 20px 20px 30px;
+    padding: 25px;
     border-radius: 20px;
-    box-shadow: $operate-shade;  
+    box-shadow: $box-shade;  
     counter-increment: number;
     list-style-type: none;
 }
@@ -79,14 +87,61 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endCo
     left: 18px;
     background-color: #9356DC;
     border-radius: 20px;
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     color: #ffff;
-    font-size: 0.8rem;
+    font-size: 0.70rem;
     text-align: center;
-    padding: 4px 3px 0px 2px;
+   
+    line-height: 1.25rem;
 }
 @mixin operate-hov {
     cursor:pointer;
     background-color: $color-primary-lighten;
+    box-shadow: $box-shade-hover;
+
+}
+
+/*Menu style*/
+
+@mixin underline-menu-h2 {
+    display: block;
+    padding-top: 5px;
+    border-bottom: 3px solid $color-tertiary;
+    content: '';
+    width: 10%;
+    
+    
+}
+@mixin menu-li-style {
+   list-style-type: none;
+    background-color: $color-white;
+    border-radius: 20px;
+    padding: 15px 15px;
+    margin: 20px;
+    box-shadow: $box-shade;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    overflow: hidden;
+    transition-duration: 400ms;
+    cursor: pointer;
+    &:hover{
+        box-shadow: $box-shade-hover;
+    }
+}
+@mixin new-style {
+    display: block;
+    content:'Nouveau';
+    color: $color-tertiary-dark;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.7rem;
+    border-radius: 2px;
+    background-color: $color-tertiary;
+    padding:5px 10px;
+    font-family: Roboto;
+    font-weight: 700;
+    box-shadow: $box-shade;
 }

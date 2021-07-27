@@ -16,12 +16,17 @@ $content-font: 'roboto', sans-serif;
 /* font-size and weight*/
 $header-size: 1.5rem;
 $h3-size: 0.9rem;
-$h2-Head: 0% 5% 5% 5%;
+$h2-Head: 0 15px 15px 10px;
 
 
 /* shadows*/
 $head-shade: inset 0 4px 9px -7px rgba(0,0,0,0.7);
-$operate-shade:0px 3px 22px -15px black;
+$box-shade:0px 3px 22px -10px #0000003d;
+$box-shade-hover:0px 3px 22px -5px #00000078;
+
+$button-shade:0px 10px 20px -14px black;
+
+
 /* Media queries */
 $breakpoints: (
     small: 499px,

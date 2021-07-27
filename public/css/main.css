@@ -4,15 +4,16 @@
 /* Media queries */
 /* Media queries */
 /* font properties*/
-/* home button gradient properties*/
+/* gradient properties*/
 /*li .operation*/
+/*Menu style*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h5, h6, p, span, a, ::placeholder {
+h1, h2, h3, h5, h6, p, span, a, li, ::placeholder {
   font-family: "Roboto", sans-serif;
   color: black;
 }
@@ -27,17 +28,25 @@ p {
 
 button {
   order: 2;
+  align-self: center;
   width: fit-content;
   color: #ffff;
-  align-self: center;
   border: none;
   font-size: 0.85rem;
-  margin: 5% 0 12% 0;
-  padding: 5% 6%;
-  border-radius: 25px;
-  background: #9356dc;
+  margin: 15px 0 40px 0;
+  padding: 15px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px -14px black;
+  transition-duration: 400ms;
   background: linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+}
+
+button:hover {
+  background: linear-gradient(10deg, #9356dc 10%, #ff79da 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  box-shadow: 0px 3px 22px -5px #00000078;
 }
 
 .presentation {
@@ -50,39 +59,45 @@ button {
 }
 
 .presentation h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 900;
-  margin: 0% 5% 5% 5%;
-  padding-top: 12%;
+  margin: 0 15px 15px 10px;
+  padding: 40px 15px 0 10px;
   order: 0;
 }
 
 .presentation h1 {
   font-size: 0.9rem;
   font-weight: 300;
-  margin: 0% 0 5% 0;
+  margin: 0 0 15px 0;
   order: 1;
 }
 
 .operation {
-  margin-bottom: 20%;
+  margin-bottom: 70px;
 }
 
 .operation h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 900;
-  margin: 0% 5% 5% 5%;
-  padding-top: 12%;
+  margin: 0 15px 15px 10px;
+  padding: 40px 15px 0 10px;
+}
+
+.operation i {
+  color: grey;
+  padding: 0 20px 0 5px;
 }
 
 .operation li {
   background-color: #f6f6f6;
-  margin: 8% 6% 8% 8%;
-  padding: 7%;
+  margin: 20px 20px 20px 30px;
+  padding: 25px;
   border-radius: 20px;
-  box-shadow: 0px 3px 22px -15px black;
+  box-shadow: 0px 3px 22px -10px #0000003d;
   counter-increment: number;
   list-style-type: none;
+  transition-duration: 400ms;
 }
 
 .operation li::before {
@@ -91,26 +106,22 @@ button {
   left: 18px;
   background-color: #9356DC;
   border-radius: 20px;
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   color: #ffff;
-  font-size: 0.8rem;
+  font-size: 0.70rem;
   text-align: center;
-  padding: 4px 3px 0px 2px;
+  line-height: 1.25rem;
 }
 
 .operation li:hover {
   cursor: pointer;
   background-color: #f2eafb;
+  box-shadow: 0px 3px 22px -5px #00000078;
 }
 
 .operation li:hover i {
   color: #9356DC;
-}
-
-.operation i {
-  color: grey;
-  padding: 0 5% 0  2%;
 }
 
 .restaurant-grid {
@@ -118,35 +129,34 @@ button {
   padding-bottom: 30px;
 }
 
+.restaurant-grid a {
+  text-decoration: none;
+}
+
 .restaurant-grid h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 900;
-  margin: 0% 5% 5% 5%;
-  padding-top: 12%;
+  margin: 0 15px 15px 10px;
+  padding: 40px 15px 0 10px;
 }
 
 .restaurant-grid article {
   display: flex;
   flex-flow: row wrap;
-  margin: 7%;
+  margin: 20px;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0px 3px 22px -10px #0000003d;
+  transition-duration: 400ms;
+}
+
+.restaurant-grid article:hover {
+  box-shadow: 0px 3px 22px -5px #00000078;
 }
 
 .restaurant-grid article > div {
-  margin: -2px;
-}
-
-.restaurant-grid .label-new {
-  position: absolute;
-  background-color: #99E2D0;
-  color: #278870;
-  top: 15px;
-  right: 15px;
-  font-size: 0.6rem;
-  font-weight: 500;
-  padding: 2% 3%;
+  margin: -4px;
 }
 
 .restaurant-grid img {
@@ -172,6 +182,7 @@ button {
 
 .restaurant-grid__infos i:before {
   font-size: 1.2rem;
+  transition-duration: 1000ms;
 }
 
 .restaurant-grid__infos i:hover::before {
@@ -183,6 +194,22 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
+.new::after {
+  display: block;
+  content: 'Nouveau';
+  color: #278870;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.7rem;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  padding: 5px 10px;
+  font-family: Roboto;
+  font-weight: 700;
+  box-shadow: 0px 3px 22px -10px #0000003d;
+}
+
 header i:before {
   position: absolute;
   left: 20px;
@@ -191,36 +218,38 @@ header i:before {
 }
 
 img {
-  aspect-ratio: 4/3;
   width: 100%;
   filter: brightness(90%);
 }
 
 .menu {
-  padding: 9% 7%;
-  border-radius: 25px;
+  padding: 40px 0;
+  border-radius: 40px;
   overflow: hidden;
   margin-top: -50px;
-  position: absolute;
+  position: relative;
   background-color: #f6f6f6;
-  width: 86%;
+  width: 100%;
 }
 
 .menu h1 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  padding-left: 25px;
 }
 
 .menu .fa-heart {
   position: absolute;
-  top: 40px;
-  right: 30px;
+  top: 3.5%;
+  right: 10%;
   font-weight: 300;
 }
 
 .menu .fa-heart:before {
   font-size: 1.2rem;
+  cursor: pointer;
+  transition-duration: 1300ms;
 }
 
 .menu .fa-heart:hover::before {
@@ -232,22 +261,111 @@ img {
   -webkit-text-fill-color: transparent;
 }
 
+.menu .fa-heart:focus::before {
+  font-weight: 900;
+  background: #9356dc;
+  background: -webkit-linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .menu h2 {
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  margin-top: 7%;
+  margin-top: 50px;
+  padding-left: 35px;
 }
 
 .menu h2::after {
-  display: inline-block;
+  display: block;
+  padding-top: 5px;
   border-bottom: 3px solid #99E2D0;
+  content: '';
+  width: 10%;
+}
+
+.menu li {
+  list-style-type: none;
+  background-color: #ffff;
+  border-radius: 20px;
+  padding: 15px 15px;
+  margin: 20px;
+  box-shadow: 0px 3px 22px -10px #0000003d;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  overflow: hidden;
+  transition-duration: 400ms;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  box-shadow: 0px 3px 22px -5px #00000078;
+}
+
+.menu li div:first-child {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu li + div, .menu li h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menu li + div, .menu li p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menu li:focus i, .menu li:active i {
+  width: 62px;
+}
+
+.menu p {
+  padding-top: 5px;
+}
+
+.price-check {
+  display: flex;
+  flex-flow: row;
+}
+
+.price-check p {
+  align-self: flex-end;
+  margin-right: 10px;
+  margin-left: 5px;
+  font-weight: 900;
+}
+
+.price-check i:before {
+  font-size: 1.1rem;
+  color: #ffff;
+  background-color: #99E2D0;
+  padding: 30px 20px;
+  margin: 15px;
+}
+
+.price-check i {
+  align-self: center;
+  width: 0;
+}
+
+.menu-button {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 50px;
 }
 
 footer {
   background-color: #353535;
   color: #ffff;
-  padding: 8%;
+  padding: 20px;
   padding-bottom: 40px;
 }
 
@@ -267,6 +385,7 @@ footer ul li {
   padding-top: 8px;
   font-family: roboto;
   font-weight: 300;
+  color: white;
 }
 
 footer ul li:first-child, footer ul li:nth-child(2) {
@@ -275,6 +394,10 @@ footer ul li:first-child, footer ul li:nth-child(2) {
 
 footer ul i {
   padding-right: 5px;
+}
+
+footer ul i::before {
+  font-size: 0.5rem;
 }
 
 footer ul li:first-child i {

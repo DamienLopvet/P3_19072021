@@ -13,15 +13,22 @@
         @include HP-h1-style;
         order:1;
     }
+       
 }
 .operation{
-    margin-bottom: 20%;
+    margin-bottom: 70px;
+
     & h2{
         @include HP-h2-style;
 
     }
+    & i{
+        color:$color-i-operate;
+        padding:0 20px 0 5px;
+    }
     & li{
         @include operate-li;
+        transition-duration: 400ms;
     &::before {
         @include counter-li-HP;
       }
@@ -32,39 +39,33 @@
     }
     }
     }
-    & i{
-        color:$color-i-operate;
-        padding:0 5% 0  2%;
-    }
+    
 }
 
 .restaurant-grid{
     background-color: $color-bck-grd-light;
     padding-bottom: 30px;
+    & a{
+        text-decoration: none;
+    }
     & h2{
         @include HP-h2-style;
     }
     & article{
         display: flex;
         flex-flow: row wrap;
-        margin:7%;
+        margin:20px;
         border-radius: 15px;
         overflow: hidden;
         position: relative;
+        box-shadow: $box-shade;
+        transition-duration: 400ms;
+        &:hover{
+            box-shadow: $box-shade-hover;
+        }
     & > div{
-        margin:-2px;
+        margin:-4px;
     }
-    }
-    & .label-new{
-        position: absolute;
-        background-color: $color-tertiary;
-        color: $color-tertiary-dark;
-        top:15px;
-        right:15px;
-        font-size: 0.6rem;
-        font-weight: 500;
-        padding:2% 3%;
-
     }
     & img{
         aspect-ratio: 16/9;
@@ -85,13 +86,16 @@
         font-weight: 300;
         &:before{
             font-size: 1.2rem;
+            transition-duration: 1000ms;
         }
     &:hover::before{
         font-weight: 900;
         @include heart-gradient;
     }
+   
     }
     }
-
-
+}
+.new::after{
+    @include new-style
 }
