@@ -38,6 +38,7 @@
     font-weight: 500;
     font-size: 1.4rem;
     padding-left: 25px;
+    position: relative;
 
 }
 
@@ -51,15 +52,9 @@
 }
 
 /* gradient properties*/
-@mixin gradient-primary {
-   
-background: linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
-}
-@mixin gradient-primary-hover{
-    background: linear-gradient(10deg, rgba(147,86,220,1) 10%, rgba(255,121,218,1) 80%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
-}
+
+
+
 
 @mixin heart-gradient{
     background: rgb(147,86,220);
@@ -95,10 +90,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endCo
    
     line-height: 1.25rem;
 }
-@mixin operate-hov {
+@mixin operate-hover {
     cursor:pointer;
     background-color: $color-primary-lighten;
-    box-shadow: $box-shade-hover;
+    box-shadow: $button-shade-hover;
 
 }
 
@@ -109,26 +104,41 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endCo
     padding-top: 5px;
     border-bottom: 3px solid $color-tertiary;
     content: '';
-    width: 10%;
+    width: 40px;
     
     
 }
+@mixin menu-container-style {
+    padding:40px 0;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-top: -50px;
+    position: relative;
+    background-color: $color-bck-grd-light;
+    width: 100%;
+    }
+    @mixin heart-menu {
+        position: absolute;
+        top:50px;
+        right:50px;
+        font-weight: 300;
+       }
+
 @mixin menu-li-style {
    list-style-type: none;
     background-color: $color-white;
     border-radius: 20px;
-    padding: 15px 15px;
     margin: 20px;
     box-shadow: $box-shade;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     overflow: hidden;
-    transition-duration: 400ms;
     cursor: pointer;
-    &:hover{
+    transition-duration:400ms ;
+   /* &:hover{
         box-shadow: $box-shade-hover;
-    }
+    }*/
 }
 @mixin new-style {
     display: block;

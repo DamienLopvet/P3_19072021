@@ -13,7 +13,7 @@
   padding: 0;
 }
 
-h1, h2, h3, h5, h6, p, span, a, li, ::placeholder {
+h1, h2, h3, h5, h6, p, span, a, li, button, ::placeholder {
   font-family: "Roboto", sans-serif;
   color: black;
 }
@@ -37,16 +37,59 @@ button {
   padding: 15px 20px;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0px 10px 20px -14px black;
-  transition-duration: 400ms;
+  box-shadow: 0px 3px 22px -5px #00000078;
   background: linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  position: relative;
+  z-index: 1;
 }
 
-button:hover {
-  background: linear-gradient(10deg, #9356dc 10%, #ff79da 80%);
+button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(350deg, #9356dc 0%, #ff79da 80%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: 400ms;
+  border-radius: 30px;
+}
+
+button:hover::after {
+  opacity: 1;
+  box-shadow: 5px 8px 8px -5px #00000078;
+}
+
+.heartsecond {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  font-weight: 900 !important;
+  background: #9356dc;
+  background: -webkit-linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
-  box-shadow: 0px 3px 22px -5px #00000078;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -1;
+  opacity: 0;
+  transition: 600ms;
+}
+
+.heartfirst {
+  position: relative;
+  z-index: 1;
+  font-weight: 100 !important;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+.heartfirst:hover .heartsecond {
+  opacity: 1;
+  z-index: 3;
 }
 
 .presentation {
@@ -117,7 +160,7 @@ button:hover {
 .operation li:hover {
   cursor: pointer;
   background-color: #f2eafb;
-  box-shadow: 0px 3px 22px -5px #00000078;
+  box-shadow: 5px 8px 8px -5px #00000078;
 }
 
 .operation li:hover i {
@@ -152,7 +195,7 @@ button:hover {
 }
 
 .restaurant-grid article:hover {
-  box-shadow: 0px 3px 22px -5px #00000078;
+  box-shadow: 5px 8px 8px -5px #00000078;
 }
 
 .restaurant-grid article > div {
@@ -173,25 +216,10 @@ button:hover {
   padding: 5%;
 }
 
-.restaurant-grid__infos i {
+.restaurant-grid__infos .heart {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-weight: 300;
-}
-
-.restaurant-grid__infos i:before {
-  font-size: 1.2rem;
-  transition-duration: 1000ms;
-}
-
-.restaurant-grid__infos i:hover::before {
-  font-weight: 900;
-  background: #9356dc;
-  background: -webkit-linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .new::after {
@@ -237,37 +265,13 @@ img {
   font-weight: 500;
   font-size: 1.4rem;
   padding-left: 25px;
+  position: relative;
 }
 
-.menu .fa-heart {
+.menu .heart-menu {
   position: absolute;
-  top: 3.5%;
-  right: 10%;
-  font-weight: 300;
-}
-
-.menu .fa-heart:before {
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition-duration: 1300ms;
-}
-
-.menu .fa-heart:hover::before {
-  font-weight: 900;
-  background: #9356dc;
-  background: -webkit-linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.menu .fa-heart:focus::before {
-  font-weight: 900;
-  background: #9356dc;
-  background: -webkit-linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  top: 50px;
+  right: 40px;
 }
 
 .menu h2 {
@@ -283,26 +287,24 @@ img {
   padding-top: 5px;
   border-bottom: 3px solid #99E2D0;
   content: '';
-  width: 10%;
+  width: 40px;
 }
 
 .menu li {
   list-style-type: none;
   background-color: #ffff;
   border-radius: 20px;
-  padding: 15px 15px;
   margin: 20px;
   box-shadow: 0px 3px 22px -10px #0000003d;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
   overflow: hidden;
-  transition-duration: 400ms;
   cursor: pointer;
-}
-
-.menu li:hover {
-  box-shadow: 0px 3px 22px -5px #00000078;
+  transition-duration: 400ms;
+  /* &:hover{
+        box-shadow: $box-shade-hover;
+    }*/
 }
 
 .menu li div:first-child {
@@ -313,44 +315,56 @@ img {
 .menu li + div, .menu li h3 {
   text-overflow: ellipsis;
   overflow: hidden;
+  padding: 15px 0 0 15px;
 }
 
 .menu li + div, .menu li p {
   text-overflow: ellipsis;
   overflow: hidden;
+  padding: 5px 0 0 15px;
 }
 
-.menu li:focus i, .menu li:active i {
-  width: 62px;
-}
-
-.menu p {
+.menu li p {
   padding-top: 5px;
 }
 
-.price-check {
+.menu li .price-check {
   display: flex;
   flex-flow: row;
+  padding: 0;
+  margin-right: -80px;
+  transition: 500ms;
 }
 
-.price-check p {
-  align-self: flex-end;
-  margin-right: 10px;
+.menu li .price-check p {
+  align-self: center;
+  margin-right: 20px;
   margin-left: 5px;
   font-weight: 900;
 }
 
-.price-check i:before {
-  font-size: 1.1rem;
-  color: #ffff;
+.menu li .price-check i {
+  align-self: center;
   background-color: #99E2D0;
-  padding: 30px 20px;
-  margin: 15px;
+  padding: 10px 10px;
 }
 
-.price-check i {
-  align-self: center;
-  width: 0;
+.menu li .price-check i:before {
+  font-size: 1.1rem;
+  color: #ffff;
+  display: inline-block;
+  margin: 15px;
+  transition-duration: 0ms;
+  transform: rotate(-1turn);
+}
+
+.menu li:hover .price-check {
+  margin-right: 0px;
+}
+
+.menu li:hover i:before {
+  transform: rotate(0turn);
+  transition-duration: 500ms;
 }
 
 .menu-button {
@@ -446,7 +460,7 @@ header {
 
 .search-form input:hover::placeholder {
   opacity: 20%;
-  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 
 .search-form i {
@@ -456,5 +470,5 @@ header {
 input::placeholder {
   font-size: 0.8rem;
   font-weight: 700;
-  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
 }

@@ -9,36 +9,17 @@ img{
     filter: brightness(90%);
 }
 .menu{
-    padding:40px 0;
-    border-radius: 40px;
-    overflow: hidden;
-    margin-top: -50px;
-    position: relative;
-    background-color: $color-bck-grd-light;
-    width: 100%;
+    @include menu-container-style;
+    
     & h1{
         @include menu-h1-style; }
-    & .fa-heart{
-        position: absolute;
-        top:3.5%;
-        right:10%;
-        font-weight: 300;
-        &:before{
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition-duration: 1300ms;
+        & .heart-menu{
+            position: absolute;
+            top: 50px;
+            right: 40px;
         }
-    &:hover::before{
-        font-weight: 900;
-        @include heart-gradient;
-    }
-    &:focus::before{
-        font-weight: 900;
-        @include heart-gradient;
-    }
     
-   
-}
+    
     & h2{
         @include h2-menu-style;
         &::after{
@@ -54,45 +35,61 @@ img{
         & + div, h3{
             text-overflow: ellipsis;
             overflow: hidden;
+            padding: 15px 0 0 15px;
         }
         & + div, p{
             text-overflow: ellipsis;
              overflow: hidden;
+            padding: 5px 0 0 15px;
+
         }
-        &:focus i, &:active i{
-            width: 62px;
+        & p{
+            padding-top: 5px;
         }
-    }
-    & p{
-        padding-top: 5px;
-    }
-}
-.price-check{
-display: flex;
-flex-flow: row;
+       & .price-check{
+            display: flex;
+            flex-flow: row;
+            padding: 0;
+            margin-right: -80px;
+            transition:  500ms;
+            
+            
+            & p{
+                align-self: center;
+                margin-right: 20px;
+                margin-left: 5px;
+                font-weight: 900;
+            
+            }
+            & i{
+                align-self: center;
+                background-color: $color-tertiary;
+                padding:10px 10px;
+                
+            
+            }
+             & i:before{
+                font-size: 1.1rem;
+                color:$color-white;
+                display: inline-block;
+                margin: 15px;
+                transition-duration: 0ms;
+                transform: rotate(-1turn);
+             }
+            }
 
-& p{
-    align-self: flex-end;
-    margin-right: 10px;
-    margin-left: 5px;
-    font-weight: 900;
+        &:hover .price-check{
+            margin-right: 0px;
+              
+          }
+        &:hover i:before{
+            transform: rotate(0turn);
+            transition-duration: 500ms;
+        }
+    
+    
+}}
 
-}
-
- & i:before{
-    font-size: 1.1rem;
-    color:$color-white;
-    background-color: $color-tertiary;
-    padding:30px 20px;
-    margin: 15px;
- }
- & i{
-     align-self: center;
-     width: 0;
-
- }
- 
-}
 
 .menu-button{
     width: 200px;

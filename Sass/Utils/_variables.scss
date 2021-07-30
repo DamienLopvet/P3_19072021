@@ -8,7 +8,8 @@ $color-bck-grd-light:#f6f6f6;
 $color-primary-lighten: lighten($color-primary, 35%);
 $color-footer: #353535;
 $color-i-operate:grey;
-
+$gradient:linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+$gradient-brighter:linear-gradient(350deg, #9356dc 0%, #ff79da 80%);
 /* font */
 $head-foot-font: 'Shrikhand', sans-serif;
 $content-font: 'roboto', sans-serif;
@@ -22,9 +23,9 @@ $h2-Head: 0 15px 15px 10px;
 /* shadows*/
 $head-shade: inset 0 4px 9px -7px rgba(0,0,0,0.7);
 $box-shade:0px 3px 22px -10px #0000003d;
-$box-shade-hover:0px 3px 22px -5px #00000078;
+$button-shade:0px 3px 22px -5px #00000078;
 
-$button-shade:0px 10px 20px -14px black;
+$button-shade-hover:5px 8px 8px -5px #00000078;
 
 
 /* Media queries */

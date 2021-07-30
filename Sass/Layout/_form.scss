@@ -10,7 +10,7 @@
         width: 150px;
         &:focus{
             outline: none;
-            @include p-bold
+            @include p-bold;
         &::placeholder{
             opacity: 0;
             -webkit-transition: opacity 0.35s ease-in-out;
@@ -20,7 +20,7 @@
     
     &:hover::placeholder{
         opacity: 20%;
-        -moz-transition-duration: 0.4s; 
+        transition-duration: 0.4s; 
         
     }
 }
@@ -30,6 +30,6 @@
 }
 input::placeholder{
     @include p-bold;
-    -webkit-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
 }
    

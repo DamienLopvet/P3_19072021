@@ -33,7 +33,7 @@
         @include counter-li-HP;
       }
     &:hover{
-        @include operate-hov;
+        @include operate-hover;
     & i{
         color:$color-primary;
     }
@@ -61,7 +61,7 @@
         box-shadow: $box-shade;
         transition-duration: 400ms;
         &:hover{
-            box-shadow: $box-shade-hover;
+            box-shadow: $button-shade-hover;
         }
     & > div{
         margin:-4px;
@@ -79,23 +79,14 @@
         position: relative;
         padding: 5%;
     
-        & i{
+        & .heart{
         position: absolute;
         top:20px;
         right:20px;
-        font-weight: 300;
-        &:before{
-            font-size: 1.2rem;
-            transition-duration: 1000ms;
         }
-    &:hover::before{
-        font-weight: 900;
-        @include heart-gradient;
+        }
     }
-   
-    }
-    }
-}
+
 .new::after{
-    @include new-style
+    @include new-style;
 }
