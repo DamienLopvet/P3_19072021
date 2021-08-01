@@ -1,0 +1,28 @@
+.heartsecond{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    font-weight: 900!important;
+    background: rgb(147,86,220);
+    background: -webkit-linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1); 
+    -webkit-background-clip: text; 
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: -1;
+    opacity: 0;
+    transition: 600ms;
+}
+.heartfirst{
+    position: relative;
+   z-index: 1;
+   font-weight: 100!important;
+   transition: 400ms;
+   cursor: pointer;
+   &:hover .heartsecond{
+    opacity: 1;
+    z-index: 3;
+   }
+}
