@@ -107,7 +107,7 @@ p {
 @keyframes loader {
   from {
     opacity: 1;
-    filter: blur(20px);
+    filter: blur(10px);
   }
   30% {
     filter: blur(0px);
