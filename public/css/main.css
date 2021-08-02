@@ -22,8 +22,12 @@ h3 {
   font-size: 0.9rem;
 }
 
+h4 {
+  font-size: 0.9rem;
+}
+
 p {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .loader {
@@ -100,24 +104,24 @@ p {
     top: 0;
   }
   to {
-    top: -20px;
+    top: -22px;
   }
 }
 
 @keyframes loader {
   from {
     opacity: 1;
-    filter: blur(10px);
+    filter: blur(2px);
   }
-  30% {
+  60% {
     filter: blur(0px);
   }
-  90% {
+  80% {
     opacity: 1;
-    transform: translateY(0%);
+    /* transform: translateY(0%);*/
   }
   to {
-    transform: translateY(-100%);
+    /*transform: translateY(-100%);*/
     opacity: 0;
   }
 }
@@ -159,6 +163,8 @@ article li:nth-child(4) {
 }
 
 .heartsecond {
+  font-size: 1.2rem;
+  transform: scaleY(1.02);
   position: absolute;
   right: 0;
   top: 0;
@@ -177,16 +183,19 @@ article li:nth-child(4) {
 }
 
 .heartfirst {
+  font-size: 1.2rem;
+  transform: scaleY(1.02);
   position: relative;
   z-index: 1;
   font-weight: 100 !important;
   transition: 400ms;
   cursor: pointer;
+  color: #353535;
 }
 
 .heartfirst:hover .heartsecond {
   opacity: 1;
-  z-index: 3;
+  z-index: 2;
 }
 
 button {
@@ -231,14 +240,15 @@ button:hover::after {
   justify-content: center;
   background-color: #f6f6f6;
   padding: 0 20px 20px 20px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
 .presentation h2 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 900;
   margin: 0 15px 15px 10px;
-  padding: 40px 15px 0 10px;
+  padding: 35px 15px 0 10px;
   order: 0;
 }
 
@@ -246,6 +256,7 @@ button:hover::after {
   font-size: 0.9rem;
   font-weight: 300;
   margin: 0 0 15px 0;
+  line-height: 21px;
   order: 1;
 }
 
@@ -254,10 +265,14 @@ button:hover::after {
 }
 
 .operation h2 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 900;
   margin: 0 15px 15px 10px;
-  padding: 40px 15px 0 10px;
+  padding: 35px 15px 0 10px;
+}
+
+.operation ul {
+  margin-top: 25px;
 }
 
 .operation i {
@@ -265,15 +280,28 @@ button:hover::after {
   padding: 0 20px 0 5px;
 }
 
+.operation i.fa-mobile-alt {
+  font-size: 0.95rem;
+}
+
+.operation i.fa-list {
+  font-size: 0.85rem;
+  vertical-align: -0.1rem;
+}
+
 .operation li {
   background-color: #f6f6f6;
-  margin: 20px 20px 20px 30px;
-  padding: 25px;
+  margin: 20px 20px 25px 30px;
+  padding: 27px 25px 25px 25px;
   border-radius: 20px;
-  box-shadow: 0px 3px 22px -10px #0000003d;
+  box-shadow: 0px 4px 22px -8px #0000005b;
   counter-increment: number;
   list-style-type: none;
   transition-duration: 400ms;
+}
+
+.operation li h3 {
+  font-size: 0.85rem;
 }
 
 .operation li::before {
@@ -282,12 +310,12 @@ button:hover::after {
   left: 18px;
   background-color: #9356DC;
   border-radius: 20px;
-  height: 25px;
-  width: 25px;
+  height: 24px;
+  width: 24px;
   color: #ffff;
   font-size: 0.70rem;
   text-align: center;
-  line-height: 1.25rem;
+  line-height: 1.4rem;
 }
 
 .operation li:hover {
@@ -302,7 +330,8 @@ button:hover::after {
 
 .restaurant-grid {
   background-color: #f6f6f6;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+  padding-top: 20px;
 }
 
 .restaurant-grid a {
@@ -310,20 +339,20 @@ button:hover::after {
 }
 
 .restaurant-grid h2 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 900;
   margin: 0 15px 15px 10px;
-  padding: 40px 15px 0 10px;
+  padding: 35px 15px 0 10px;
 }
 
 .restaurant-grid article {
   display: flex;
   flex-flow: row wrap;
-  margin: 20px;
+  margin: 20px 20px 19px 20px;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0px 3px 22px -10px #0000003d;
+  box-shadow: 0px 4px 22px -8px #0000005b;
   transition-duration: 400ms;
 }
 
@@ -336,7 +365,7 @@ button:hover::after {
 }
 
 .restaurant-grid img {
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/8.5;
   width: 100%;
 }
 
@@ -346,13 +375,17 @@ button:hover::after {
   background-color: #ffff;
   width: 100%;
   position: relative;
-  padding: 5%;
+  padding: 15px 20px 20px 17px;
+}
+
+.restaurant-grid__infos p {
+  padding-top: 3px;
 }
 
 .restaurant-grid__infos .heart {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 30px;
 }
 
 .new::after {
@@ -360,34 +393,36 @@ button:hover::after {
   content: 'Nouveau';
   color: #278870;
   position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 0.7rem;
+  top: 14px;
+  right: 12px;
+  font-size: 0.6rem;
   border-radius: 2px;
   background-color: #99E2D0;
-  padding: 5px 10px;
+  padding: 7px 13px;
   font-family: Roboto;
-  font-weight: 700;
-  box-shadow: 0px 3px 22px -10px #0000003d;
+  font-weight: 500;
+  font-size: 0.7rem;
+  box-shadow: 0px 4px 22px -8px #0000005b;
 }
 
 header i:before {
   position: absolute;
-  left: 20px;
+  left: 23px;
   top: 26px;
   font-size: 1rem;
 }
 
 img {
   width: 100%;
-  filter: brightness(90%);
+  filter: brightness(85%);
+  aspect-ratio: 16/11;
 }
 
 .menu {
   padding: 40px 0;
-  border-radius: 40px;
+  border-radius: 40px 40px 0 0;
   overflow: hidden;
-  margin-top: -50px;
+  margin-top: -42px;
   position: relative;
   background-color: #f6f6f6;
   width: 100%;
@@ -397,27 +432,28 @@ img {
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;
   font-size: 1.4rem;
-  padding-left: 25px;
+  padding-left: 20px;
   position: relative;
+  line-height: 1rem;
 }
 
 .menu .heart-menu {
   position: absolute;
-  top: 50px;
-  right: 40px;
+  top: 37px;
+  right: 38px;
 }
 
 .menu h2 {
   font-weight: 400;
   font-size: 0.8rem;
   text-transform: uppercase;
-  margin-top: 50px;
-  padding-left: 35px;
+  margin-top: 40px;
+  padding-left: 20px;
 }
 
 .menu h2::after {
   display: block;
-  padding-top: 5px;
+  padding-top: 4.5px;
   border-bottom: 3px solid #99E2D0;
   content: '';
   width: 40px;
@@ -426,9 +462,9 @@ img {
 .menu li {
   list-style-type: none;
   background-color: #ffff;
-  border-radius: 20px;
-  margin: 20px;
-  box-shadow: 0px 3px 22px -10px #0000003d;
+  border-radius: 16px;
+  margin: 14px 14px;
+  box-shadow: 0px 4px 22px -8px #0000005b;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -448,42 +484,43 @@ img {
 .menu li + div, .menu li h3 {
   text-overflow: ellipsis;
   overflow: hidden;
-  padding: 15px 0 0 15px;
+  padding: 14px 0 0 11px;
 }
 
 .menu li + div, .menu li p {
   text-overflow: ellipsis;
   overflow: hidden;
-  padding: 5px 0 0 15px;
+  padding: 5px 0 0 11px;
 }
 
 .menu li p {
-  padding-top: 5px;
+  padding-top: 3px;
 }
 
 .menu li .price-check {
   display: flex;
   flex-flow: row;
   padding: 0;
-  margin-right: -80px;
+  margin-right: -61px;
   transition: 500ms;
 }
 
 .menu li .price-check p {
-  align-self: center;
-  margin-right: 20px;
+  align-self: flex-end;
+  margin-right: 25px;
   margin-left: 5px;
   font-weight: 900;
+  line-height: 2.25rem;
 }
 
 .menu li .price-check i {
   align-self: center;
   background-color: #99E2D0;
-  padding: 10px 10px;
+  padding: 9px 4px;
 }
 
 .menu li .price-check i:before {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #ffff;
   display: inline-block;
   margin: 15px;
@@ -501,19 +538,18 @@ img {
 }
 
 .menu-button {
-  width: 200px;
+  width: 187px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
-  margin-bottom: 50px;
+  margin-top: 52px;
+  margin-bottom: 48px;
 }
 
 footer {
   background-color: #353535;
   color: #ffff;
-  padding: 20px;
-  padding-bottom: 40px;
+  padding: 25px 20px 35px 25px;
 }
 
 footer h4 {
@@ -528,10 +564,10 @@ footer ul {
 }
 
 footer ul li {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   padding-top: 8px;
   font-family: roboto;
-  font-weight: 300;
+  font-weight: 200;
   color: white;
 }
 
@@ -584,6 +620,7 @@ header {
   outline: none;
   font-size: 0.8rem;
   font-weight: 700;
+  color: #353535;
 }
 
 .search-form input:focus::placeholder {
@@ -597,11 +634,14 @@ header {
 }
 
 .search-form i {
-  font-size: 1rem;
+  font-size: 0.85rem;
+  color: #353535;
+  vertical-align: 0.1rem;
 }
 
 input::placeholder {
   font-size: 0.8rem;
   font-weight: 700;
+  color: #353535;
   transition: opacity 0.35s ease-in-out;
 }

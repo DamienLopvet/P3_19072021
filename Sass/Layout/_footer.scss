@@ -1,8 +1,8 @@
 footer{
-    background-color: $color-footer;
+    background-color: $color-fourthary;
     color: $color-white;
-    padding: 20px;
-    padding-bottom: 40px;
+    padding: 25px 20px 35px 25px;
+    
     
     & h4{
         color: $color-white;
@@ -13,10 +13,10 @@ footer{
     & ul{
         list-style-type: none;
         & li{
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             padding-top:8px;
             font-family: roboto;
-            font-weight: 300;
+            font-weight: 200;
             color: white;
             
         }
@@ -27,9 +27,11 @@ footer{
     }
     & i{
         padding-right: 5px;
+       
     &::before{
         font-size: 0.5rem;
     }
+   
     }
     & li:first-child i{
         margin-right:8px;

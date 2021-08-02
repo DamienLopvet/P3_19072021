@@ -74,64 +74,35 @@
     
     }
 }}
-@-webkit-keyframes bounce{
-    from {top: 0;}
-    to   {top: -20px;
 
-    }
-}
 @keyframes bounce{
     from {top: 0;}
-    to   {top: -20px;
+    to   {top: -22px;
 
     }
 }
-@-webkit-keyframes loader {
-    from {
-        opacity: 1;}
-        20%{
-        -webkit-filter: blur(10px);
-                filter: blur(10px);
 
-        }
-        30%{
-            -webkit-filter: blur(0px);
-                    filter: blur(0px);
-
-        }
-       
-       90%{
-           opacity: 1;
-           transform: translateY(0%);
-        }
-                  
-      
-    to {
-        transform: translateY(-100%);
-      opacity: 0;
-      }
-}
 @keyframes loader {
     from {
         opacity: 1;
-        -webkit-filter: blur(10px);
-                filter: blur(10px);
+        -webkit-filter: blur(2px);
+                filter: blur(2px);
 
         }   
-        30%{
+        60%{
             -webkit-filter: blur(0px);
                     filter: blur(0px);
 
         }
        
-       90%{
+       80%{
            opacity: 1;
-           transform: translateY(0%);
+          /* transform: translateY(0%);*/
         }
                   
       
     to {
-        transform: translateY(-100%);
+        /*transform: translateY(-100%);*/
       opacity: 0;
       }
 }

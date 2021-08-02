@@ -4,6 +4,7 @@
     justify-content: center;
     background-color: $color-bck-grd-light;
     padding: 0 20px 20px 20px;
+    margin-bottom: 15px;
     text-align: center;
     & h2{
         @include HP-h2-style;
@@ -22,13 +23,26 @@
         @include HP-h2-style;
 
     }
+    & ul{
+        margin-top: 25px;
+    }
     & i{
         color:$color-i-operate;
         padding:0 20px 0 5px;
+    &.fa-mobile-alt{
+        font-size: 0.95rem;
+    }
+    &.fa-list{
+        font-size: 0.85rem;
+        vertical-align: -0.1rem;
+    }
     }
     & li{
         @include operate-li;
         transition-duration: 400ms;
+        & h3{
+            font-size: 0.85rem;
+        }
     &::before {
         @include counter-li-HP;
       }
@@ -36,6 +50,7 @@
         @include operate-hover;
     & i{
         color:$color-primary;
+        
     }
     }
     }
@@ -44,7 +59,8 @@
 
 .restaurant-grid{
     background-color: $color-bck-grd-light;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+    padding-top: 20px;
     & a{
         text-decoration: none;
     }
@@ -54,7 +70,7 @@
     & article{
         display: flex;
         flex-flow: row wrap;
-        margin:20px;
+        margin:20px 20px 19px 20px;
         border-radius: 15px;
         overflow: hidden;
         position: relative;
@@ -68,7 +84,7 @@
     }
     }
     & img{
-        aspect-ratio: 16/9;
+        aspect-ratio: 16/8.5;
         width: 100%;
     }
     &__infos{
@@ -77,12 +93,15 @@
         background-color: $color-white;
         width: 100%;
         position: relative;
-        padding: 5%;
+        padding: 15px 20px 20px 17px;
+        & p{
+            padding-top: 3px;
+        }
     
         & .heart{
         position: absolute;
         top:20px;
-        right:20px;
+        right:30px;
         }
         }
     }
