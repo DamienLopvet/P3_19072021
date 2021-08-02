@@ -76,22 +76,28 @@
         position: relative;
         box-shadow: $box-shade;
         transition-duration: 400ms;
+        
+
         &:hover{
             box-shadow: $button-shade-hover;
-        }
-    & > div{
-        margin:-4px;
-    }
-    }
+        }}
+    
+    
+    &__image{
+        height: 180px;
     & img{
-        aspect-ratio: 16/8.5;
         width: 100%;
+        transform: translateY(-30px);
     }
+    }
+    
+    
     &__infos{
         display: flex;
         flex-direction: column;
         background-color: $color-white;
         width: 100%;
+        
         position: relative;
         padding: 15px 20px 20px 17px;
         & p{
@@ -103,8 +109,8 @@
         top:20px;
         right:30px;
         }
-        }
-    }
+        }}
+    
 
 .new::after{
     @include new-style;
