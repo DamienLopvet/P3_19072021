@@ -27,6 +27,7 @@
     font-weight: 900;
     margin:$h2-Head;
     padding:35px 15px 0 10px;
+    line-height: 1.45rem;
     
 }
 @mixin HP-h1-style {
@@ -117,7 +118,7 @@
     padding:40px 0;
     border-radius: 40px 40px 0 0;
     overflow: hidden;
-    margin-top: -32px;
+    margin-top: -22px;
     position: relative;
     background-color: $color-bck-grd-light;
     width: 100%;
@@ -155,7 +156,7 @@
     font-size: 0.6rem;
     border-radius: 2px;
     background-color: $color-tertiary;
-    padding:7px 13px;
+    padding:7px 13px 7px 13px;
     font-family: Roboto;
     font-weight: 500;
     font-size: 0.7rem;

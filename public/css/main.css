@@ -62,7 +62,6 @@ p {
   animation-iteration-count: 4;
   -webkit-animation-iteration-count: 4;
   font-family: 'Shrikhand';
-  background: #121FCF;
   background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -112,10 +111,6 @@ p {
 @keyframes loader {
   from {
     opacity: 1;
-    filter: blur(2px);
-  }
-  60% {
-    filter: blur(0px);
   }
   80% {
     opacity: 1;
@@ -252,6 +247,7 @@ button:hover::after {
   font-weight: 900;
   margin: 0 15px 15px 10px;
   padding: 35px 15px 0 10px;
+  line-height: 1.45rem;
   order: 0;
 }
 
@@ -272,6 +268,7 @@ button:hover::after {
   font-weight: 900;
   margin: 0 15px 15px 10px;
   padding: 35px 15px 0 10px;
+  line-height: 1.45rem;
 }
 
 .operation ul {
@@ -346,6 +343,7 @@ button:hover::after {
   font-weight: 900;
   margin: 0 15px 15px 10px;
   padding: 35px 15px 0 10px;
+  line-height: 1.45rem;
 }
 
 .restaurant-grid article {
@@ -401,7 +399,7 @@ button:hover::after {
   font-size: 0.6rem;
   border-radius: 2px;
   background-color: #99E2D0;
-  padding: 7px 13px;
+  padding: 7px 13px 7px 13px;
   font-family: Roboto;
   font-weight: 500;
   font-size: 0.7rem;
@@ -416,7 +414,7 @@ header i:before {
 }
 
 .header-img {
-  width: 100%;
+  width: 360px;
   filter: brightness(90%);
   transform: scale(1.1);
   transform-origin: top;
@@ -426,7 +424,7 @@ header i:before {
   padding: 40px 0;
   border-radius: 40px 40px 0 0;
   overflow: hidden;
-  margin-top: -32px;
+  margin-top: -22px;
   position: relative;
   background-color: #f6f6f6;
   width: 100%;

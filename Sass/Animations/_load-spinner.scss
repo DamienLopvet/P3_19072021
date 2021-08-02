@@ -31,7 +31,6 @@
     -webkit-animation-iteration-count: 4;
   
     font-family: 'Shrikhand';
-    background: #121FCF;
     background: linear-gradient(to top, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -85,15 +84,9 @@
 @keyframes loader {
     from {
         opacity: 1;
-        -webkit-filter: blur(2px);
-                filter: blur(2px);
-
+        
         }   
-        60%{
-            -webkit-filter: blur(0px);
-                    filter: blur(0px);
-
-        }
+        
        
        80%{
            opacity: 1;
