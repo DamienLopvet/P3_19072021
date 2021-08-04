@@ -414,17 +414,15 @@ header i:before {
 }
 
 .header-img {
-  width: 360px;
+  width: 100%;
   filter: brightness(90%);
-  transform: scale(1.1);
-  transform-origin: top;
 }
 
 .menu {
   padding: 40px 0;
   border-radius: 40px 40px 0 0;
   overflow: hidden;
-  margin-top: -22px;
+  margin-top: -40px;
   position: relative;
   background-color: #f6f6f6;
   width: 100%;
