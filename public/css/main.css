@@ -22,15 +22,15 @@ h1, h2, h3, h5, h6, p, span, a, li, button, ::placeholder {
 }
 
 h3 {
-  font-size: 0.9rem;
+  font-size: 1.15rem;
 }
 
 h4 {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 p {
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   font-weight: 300;
 }
 
@@ -172,7 +172,7 @@ article li:nth-child(5) {
 }
 
 .heartsecond {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   transform: scaleY(1.02);
   position: absolute;
   right: 0;
@@ -192,7 +192,7 @@ article li:nth-child(5) {
 }
 
 .heartfirst {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   transform: scaleY(1.02);
   position: relative;
   z-index: 1;
@@ -217,8 +217,8 @@ button {
   width: fit-content;
   color: #ffff;
   border: none;
-  font-size: 0.85rem;
-  margin: 15px 0 40px 0;
+  font-size: 1rem;
+  margin: 15px 0 38px 0;
   padding: 15px 20px;
   border-radius: 30px;
   cursor: pointer;
@@ -244,7 +244,7 @@ button::after {
 
 button:hover::after {
   opacity: 1;
-  box-shadow: 5px 8px 8px -5px #00000078;
+  box-shadow: 0px 7px 15px 0px #0000003b;
 }
 
 .presentation {
@@ -258,49 +258,47 @@ button:hover::after {
 }
 
 .presentation h2 {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 900;
-  margin: 0 15px 15px 10px;
-  padding: 35px 15px 0 10px;
-  line-height: 1.45rem;
+  margin: 37px 15px 12px 10px;
+  padding: 0px 20px 0 10px;
   order: 0;
 }
 
 .presentation h1 {
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   font-weight: 300;
-  margin: 0 0 15px 0;
+  margin: 0 0 14px 0;
   line-height: 21px;
   order: 1;
 }
 
 .operation {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .operation h2 {
-  font-size: 1.25rem;
-  font-weight: 900;
-  margin: 0 15px 15px 10px;
-  padding: 35px 15px 0 10px;
-  line-height: 1.45rem;
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 46px 15px 10px 10px;
+  padding: 0px 20px 0 10px;
 }
 
 .operation ul {
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .operation i {
   color: grey;
-  padding: 0 20px 0 5px;
+  padding: 0 20px 0 10px;
 }
 
 .operation i.fa-mobile-alt {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 .operation i.fa-list {
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   vertical-align: -0.1rem;
 }
 
@@ -313,7 +311,7 @@ button:hover::after {
 .operation li {
   position: relative;
   background-color: #f6f6f6;
-  margin: 20px 20px 25px 30px;
+  margin: 10px 20px 18px 30px;
   padding: 27px 25px 25px 25px;
   border-radius: 20px;
   box-shadow: 0px 4px 22px -8px #0000005b;
@@ -326,7 +324,7 @@ button:hover::after {
 }
 
 .operation li h3 {
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .operation li::before {
@@ -339,33 +337,32 @@ button:hover::after {
   height: 24px;
   width: 24px;
   color: #ffff;
-  font-size: 0.70rem;
+  font-size: 0.8rem;
   text-align: center;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
 }
 
 .operation li:hover {
   cursor: pointer;
   background-color: #f2eafb;
-  box-shadow: 5px 8px 8px -5px #00000078;
+  box-shadow: 0px 7px 15px 0px #0000003b;
 }
 
 .operation li:hover i {
   color: #9356DC;
 }
 
-main {
+.restaurants {
   background-color: #f6f6f6;
-  padding-bottom: 50px;
-  padding-top: 20px;
+  padding-bottom: 55px;
+  padding-top: 10px;
 }
 
-main h2 {
-  font-size: 1.25rem;
-  font-weight: 900;
-  margin: 0 15px 15px 10px;
-  padding: 35px 15px 0 10px;
-  line-height: 1.45rem;
+.restaurants h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 46px 15px 10px 10px;
+  padding: 0px 20px 0 10px;
 }
 
 .restaurant-grid {
@@ -375,7 +372,7 @@ main h2 {
 }
 
 .restaurant-grid article {
-  margin: 20px 20px 19px 20px;
+  margin: 10px 20px;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
@@ -385,7 +382,7 @@ main h2 {
 }
 
 .restaurant-grid article:hover {
-  box-shadow: 5px 8px 8px -5px #00000078;
+  box-shadow: 0px 7px 15px 0px #0000003b;
 }
 
 .restaurant-grid article a {
@@ -393,7 +390,7 @@ main h2 {
 }
 
 .restaurant-grid__image {
-  height: 180px;
+  height: 178px;
 }
 
 .restaurant-grid__image img {
@@ -405,11 +402,11 @@ main h2 {
   background-color: #ffff;
   width: 100%;
   position: relative;
-  padding: 15px 20px 20px 17px;
+  padding: 16px 20px 16px 10px;
 }
 
 .restaurant-grid__infos p {
-  padding-top: 3px;
+  padding-top: 5px;
 }
 
 .restaurant-grid__infos .heart {
@@ -425,13 +422,12 @@ main h2 {
   position: absolute;
   top: 14px;
   right: 12px;
-  font-size: 0.6rem;
   border-radius: 2px;
   background-color: #99E2D0;
-  padding: 7px 13px 7px 13px;
+  padding: 7px 12px;
   font-family: Roboto;
   font-weight: 500;
-  font-size: 0.7rem;
+  font-size: 0.85em;
   box-shadow: 0px 4px 22px -8px #0000005b;
 }
 
@@ -439,7 +435,7 @@ header i:before {
   position: absolute;
   left: 23px;
   top: 26px;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .header-img {
@@ -456,10 +452,10 @@ header i:before {
 }
 
 .menu {
-  padding: 40px 0;
+  padding: 30px 0;
   border-radius: 40px 40px 0 0;
   overflow: hidden;
-  margin-top: -40px;
+  margin-top: -35px;
   position: relative;
   background-color: #f6f6f6;
   width: 100%;
@@ -468,29 +464,28 @@ header i:before {
 .menu h1 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   padding-left: 20px;
   position: relative;
-  line-height: 1rem;
 }
 
 .menu .heart-menu {
   position: absolute;
-  top: 37px;
+  top: 40px;
   right: 38px;
 }
 
 .menu h2 {
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  margin-top: 40px;
+  margin-top: 30px;
   padding-left: 20px;
 }
 
 .menu h2::after {
   display: block;
-  padding-top: 4.5px;
+  padding-top: 4px;
   border-bottom: 3px solid #99E2D0;
   content: '';
   width: 40px;
@@ -500,7 +495,7 @@ header i:before {
   list-style-type: none;
   background-color: #ffff;
   border-radius: 16px;
-  margin: 14px 14px;
+  margin: 14px 13px;
   box-shadow: 0px 4px 22px -8px #0000005b;
   display: flex;
   flex-flow: row;
@@ -525,8 +520,8 @@ header i:before {
 .menu li p {
   text-overflow: ellipsis;
   overflow: hidden;
-  padding: 4px 0 0 11px;
-  font-size: 0.75rem;
+  padding: 3px 0 11px 11px;
+  font-size: 0.95rem;
 }
 
 .menu li .price-check {
@@ -542,13 +537,13 @@ header i:before {
   margin-right: 25px;
   margin-left: 5px;
   font-weight: 900;
-  line-height: 2.2rem;
+  line-height: 1rem;
 }
 
 .menu li .price-check i {
   align-self: center;
   background-color: #99E2D0;
-  padding: 9px 4px;
+  padding: 11px 4px;
 }
 
 .menu li .price-check i:before {
@@ -580,14 +575,14 @@ header i:before {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 52px;
-  margin-bottom: 48px;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 footer {
   background-color: #353535;
   color: #ffff;
-  padding: 25px 20px 35px 25px;
+  padding: 25px 20px 30px 20px;
 }
 
 footer h4 {
@@ -602,7 +597,7 @@ footer ul {
 }
 
 footer ul li {
-  font-size: 0.75rem;
+  font-size: 1rem;
   padding-top: 8px;
   font-family: roboto;
   font-weight: 200;
@@ -618,7 +613,7 @@ footer ul i {
 }
 
 footer ul i::before {
-  font-size: 0.5rem;
+  font-size: 0.85rem;
 }
 
 footer ul li:first-child i {
@@ -634,7 +629,7 @@ header {
   display: block;
   font-family: "Shrikhand", sans-serif;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   background-color: #ffff;
   padding-top: 15px;
   padding-bottom: 5px;
@@ -656,7 +651,7 @@ header {
 
 .search-form input:focus {
   outline: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #353535;
 }
@@ -672,13 +667,13 @@ header {
 }
 
 .search-form i {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: #353535;
   vertical-align: 0.1rem;
 }
 
 input::placeholder {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #353535;
   transition: opacity 0.35s ease-in-out;

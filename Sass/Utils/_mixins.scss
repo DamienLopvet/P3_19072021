@@ -18,55 +18,34 @@
 
 /* font properties*/
 @mixin p-bold{
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 700;
     color: $color-fourthary;
 } 
-@mixin HP-h2-style {
-    font-size: 1.25rem;
+@mixin HP-h2-presentation {
+    font-size: 1.45rem;
     font-weight: 900;
-    margin:$h2-Head;
-    padding:35px 15px 0 10px;
-    line-height: 1.45rem;
+    margin: 37px 15px 12px 10px;;
+    padding:0px 20px 0 10px;
+    
+}
+@mixin HP-h2-operate {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin: 46px 15px 10px 10px;;
+    padding:0px 20px 0 10px;
     
 }
 @mixin HP-h1-style {
-    font-size: 0.9rem;
+    font-size: 1.15rem;
     font-weight: 300;
-    margin: 0 0 15px 0;
+    margin: 0 0 14px 0;
     line-height: 21px;
 }
-@mixin menu-h1-style{
-    font-family: $head-foot-font;
-    font-weight: 500;
-    font-size: 1.4rem;
-    padding-left: 20px;
-    position: relative;
-    line-height: 1rem;
 
 
-}
 
-@mixin h2-menu-style {
-    font-weight: 400;
-    font-size:0.8rem;
-    text-transform: uppercase;
-    margin-top: 40px;
-    padding-left: 20px;
-    &::after{
-        @include underline-menu-h2;
-        }
-    
-}
-@mixin underline-menu-h2 {
-    display: block;
-    padding-top: 4.5px;
-    border-bottom: 3px solid $color-tertiary;
-    content: '';
-    width: 40px;
-    
-    
-}
+
 
 /* gradient properties*/
 
@@ -94,7 +73,7 @@
 @mixin operate-li{
     position: relative;
     background-color: $color-bck-grd-light;
-    margin: 20px 20px 25px 30px;
+    margin: 10px 20px 18px 30px;
     padding: 27px 25px 25px 25px;
     border-radius: 20px;
     box-shadow: $box-shade;  
@@ -116,10 +95,10 @@
     height: 24px;
     width: 24px;
     color: #ffff;
-    font-size: 0.70rem;
+    font-size: 0.8rem;
     text-align: center;
    
-    line-height: 1.4rem;
+    line-height: 1.6rem;
 }
 @mixin operate-hover {
     cursor:pointer;
@@ -132,22 +111,22 @@
 
 @mixin restaurant-main-container-style {
     background-color: $color-bck-grd-light;
-    padding-bottom: 50px;
-    padding-top: 20px;
+    padding-bottom: 55px;
+    padding-top: 10px;
     
     & h2{
-        @include HP-h2-style;
+        @include HP-h2-operate;
     }
 }
 
 @mixin restaurant-article {
-    margin:20px 20px 19px 20px;
-        border-radius: 15px;
-        overflow: hidden;
-        position: relative;
-        box-shadow: $box-shade;
-        transition-duration: 400ms;
-        width: 337px;
+    margin:10px 20px ;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: $box-shade;
+    transition-duration: 400ms;
+    width: 337px;
         
         &:hover{
             box-shadow: $button-shade-hover;
@@ -161,13 +140,12 @@
     position: absolute;
     top: 14px;
     right: 12px;
-    font-size: 0.6rem;
     border-radius: 2px;
     background-color: $color-tertiary;
-    padding:7px 13px 7px 13px;
+    padding:7px 12px;
     font-family: Roboto;
     font-weight: 500;
-    font-size: 0.7rem;
+    font-size: 0.85em;
     box-shadow: $box-shade;
 }
 
@@ -183,16 +161,45 @@
    
     & img{
         width: 100%;
-    filter: brightness(90%);
+        filter: brightness(90%);
     }
 }
 
+@mixin menu-h1-style{
+    font-family: $head-foot-font;
+    font-weight: 500;
+    font-size: 1.8rem;
+    padding-left: 20px;
+    position: relative;
+}
+
+@mixin h2-menu-style {
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 30px;
+    padding-left: 20px;
+    &::after{
+        @include underline-menu-h2;
+        }
+    }
+
+@mixin underline-menu-h2 {
+        display: block;
+        padding-top: 4px;
+        border-bottom: 3px solid $color-tertiary;
+        content: '';
+        width: 40px;
+}
+
+
+
 
 @mixin menu-container-style {
-    padding:40px 0;
+    padding:30px 0;
     border-radius: 40px 40px 0 0;
     overflow: hidden;
-    margin-top: -40px;
+    margin-top: -35px;
     position: relative;
     background-color: $color-bck-grd-light;
     width: 100%;
@@ -201,7 +208,7 @@
     }
     & .heart-menu{
             position: absolute;
-            top: 37px;
+            top: 40px;
             right: 38px;
         }
     }
@@ -213,7 +220,7 @@
    list-style-type: none;
     background-color: $color-white;
     border-radius: 16px;
-    margin: 14px 14px;
+    margin: 14px 13px;
     box-shadow: $box-shade;
     display: flex;
     flex-flow: row;
@@ -236,8 +243,8 @@
     & p{
         text-overflow: ellipsis;
         overflow: hidden;
-        padding: 4px 0 0 11px;
-        font-size: 0.75rem;
+        padding: 3px 0 11px 11px;
+        font-size: 0.95rem;
 
     }
     
@@ -253,13 +260,13 @@
         margin-right: 25px;
         margin-left: 5px;
         font-weight: 900;
-        line-height: 2.2rem;
+        line-height: 1rem;
     
     }
     & i{
         align-self: center;
         background-color: $color-tertiary;
-        padding:9px 4px;
+        padding:11px 4px;
         
     
     }
@@ -277,6 +284,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 52px;
-    margin-bottom: 48px;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }

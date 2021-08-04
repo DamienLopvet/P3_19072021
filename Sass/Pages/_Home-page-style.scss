@@ -7,7 +7,7 @@
     margin-bottom: 15px;
     text-align: center;
     & h2{
-        @include HP-h2-style;
+        @include HP-h2-presentation;
         order:0;
     }
     & h1{
@@ -17,23 +17,23 @@
        
 }
 .operation{
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 
     & h2{
-        @include HP-h2-style;
+        @include HP-h2-operate;
 
     }
     & ul{
-        margin-top: 25px;
+        margin-top: 15px;
     }
     & i{
         color:$color-i-operate;
-        padding:0 20px 0 5px;
+        padding:0 20px 0 10px;
     &.fa-mobile-alt{
-        font-size: 0.95rem;
+        font-size: 1.2rem;
     }
     &.fa-list{
-        font-size: 0.85rem;
+        font-size: 1.1rem;
         vertical-align: -0.1rem;
     }
     }
@@ -44,7 +44,7 @@
         @include operate-li;
         transition-duration: 400ms;
         & h3{
-            font-size: 0.85rem;
+            font-size: 1rem;
         }
     &::before {
         @include counter-li-HP;
@@ -60,7 +60,7 @@
     
 }
 
-main{
+.restaurants{
     @include restaurant-main-container-style;
    }
 
@@ -78,7 +78,7 @@ justify-content: space-evenly;
     
     
     &__image{
-        height: 180px;
+        height: 178px;
     & img{
         width: 100%;
         transform: translateY(-30px);
@@ -90,11 +90,10 @@ justify-content: space-evenly;
         
         background-color: $color-white;
         width: 100%;
-        
         position: relative;
-        padding: 15px 20px 20px 17px;
+        padding: 16px 20px 16px 10px;
         & p{
-            padding-top: 3px;
+            padding-top: 5px;
         }
     
         & .heart{
