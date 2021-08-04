@@ -8,103 +8,40 @@ header {
     
 }
 .header-img{
-    width: 100%;
-    filter: brightness(90%);
-   
-   }
+    @include header-img-style;
+    
+}
 
 .menu{
     @include menu-container-style;
-    
-    & h1{
-        @include menu-h1-style; 
-    }
-    & .heart-menu{
-            position: absolute;
-            top: 37px;
-            right: 38px;
-        }
-    
-    
     & h2{
         @include h2-menu-style;
-        &::after{
-            @include underline-menu-h2;
-            }
     }
     
     & li{
         @include menu-li-style;
-        & div:first-child{
-            overflow: hidden;
-            white-space: nowrap;    
-        }
-        & + div, h3{
-            text-overflow: ellipsis;
-            overflow: hidden;
-            padding: 14px 0 0 11px;
-        }
-        & + div, p{
-            text-overflow: ellipsis;
-             overflow: hidden;
-            padding: 5px 0 0 11px;
-
-        }
-        & p{
-            padding-top: 4px;
-            font-size: 0.75rem;
-        }
-       & .price-check{
-            display: flex;
-            flex-flow: row;
-            padding: 0;
-            margin-right: -61px;
-            transition:  500ms;
-            
-            
-            & p{
-                align-self: flex-end;
-                margin-right: 25px;
-                margin-left: 5px;
-                font-weight: 900;
-                line-height: 2.2rem;
-            
-            }
-            & i{
-                align-self: center;
-                background-color: $color-tertiary;
-                padding:9px 4px;
-                
-            
-            }
-             & i:before{
-                font-size: 1.05rem;
-                color:$color-white;
-                display: inline-block;
-                margin: 15px;
-                transition-duration: 0ms;
-                transform: rotate(-1turn);
-             }
+    & .price-check{
+            @include Price-check-style;
             }
 
-        &:hover .price-check{
+    &:hover .price-check{
             margin-right: 0px;
               
           }
-        &:hover i:before{
+    &:hover i:before{
             transform: rotate(0turn);
             transition-duration: 500ms;
         }
-    
-    
-}}
+    }
+    & article{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
 
+}
 
 .menu-button{
-    width: 187px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 52px;
-    margin-bottom: 48px;
+    @include menu-button-style;
+    
 }

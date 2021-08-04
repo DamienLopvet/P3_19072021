@@ -53,6 +53,9 @@
     text-transform: uppercase;
     margin-top: 40px;
     padding-left: 20px;
+    &::after{
+        @include underline-menu-h2;
+        }
     
 }
 @mixin underline-menu-h2 {
@@ -78,10 +81,18 @@
     -webkit-text-fill-color: transparent;
 }
 
+/***********************Home Page***********************/
 
+/* .operation*/
 
-/*li .operation*/
+@mixin operate-ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
 @mixin operate-li{
+    position: relative;
     background-color: $color-bck-grd-light;
     margin: 20px 20px 25px 30px;
     padding: 27px 25px 25px 25px;
@@ -89,11 +100,17 @@
     box-shadow: $box-shade;  
     counter-increment: number;
     list-style-type: none;
+    transition-duration: 400ms;
+    max-width: 280px;
+    min-width: 280px;
+
+
 }
 @mixin counter-li-HP{
     content: counter(number) " ";
     position: absolute;
-    left: 18px;
+    left: -12px;
+    bottom: 21px;
     background-color: #9356DC;
     border-radius: 20px;
     height: 24px;
@@ -111,41 +128,32 @@
 
 }
 
-/*Menu style*/
+/*restaurant-style*/
 
-
-@mixin menu-container-style {
-    padding:40px 0;
-    border-radius: 40px 40px 0 0;
-    overflow: hidden;
-    margin-top: -40px;
-    position: relative;
+@mixin restaurant-main-container-style {
     background-color: $color-bck-grd-light;
-    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    
+    & h2{
+        @include HP-h2-style;
     }
-    @mixin heart-menu {
-        position: absolute;
-        top:50px;
-        right:50px;
-        font-weight: 300;
-       }
-
-@mixin menu-li-style {
-   list-style-type: none;
-    background-color: $color-white;
-    border-radius: 16px;
-    margin: 14px 14px;
-    box-shadow: $box-shade;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    overflow: hidden;
-    cursor: pointer;
-    transition-duration:400ms ;
-   /* &:hover{
-        box-shadow: $box-shade-hover;
-    }*/
 }
+
+@mixin restaurant-article {
+    margin:20px 20px 19px 20px;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: $box-shade;
+        transition-duration: 400ms;
+        width: 337px;
+        
+        &:hover{
+            box-shadow: $button-shade-hover;
+        }
+}
+
 @mixin new-style {
     display: block;
     content:'Nouveau';
@@ -161,4 +169,114 @@
     font-weight: 500;
     font-size: 0.7rem;
     box-shadow: $box-shade;
+}
+
+
+/*****************************Menu-Pages******************/
+/*Menu style*/
+@mixin header-img-style {
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+   
+    & img{
+        width: 100%;
+    filter: brightness(90%);
+    }
+}
+
+
+@mixin menu-container-style {
+    padding:40px 0;
+    border-radius: 40px 40px 0 0;
+    overflow: hidden;
+    margin-top: -40px;
+    position: relative;
+    background-color: $color-bck-grd-light;
+    width: 100%;
+    & h1{
+        @include menu-h1-style; 
+    }
+    & .heart-menu{
+            position: absolute;
+            top: 37px;
+            right: 38px;
+        }
+    }
+
+    
+ 
+
+@mixin menu-li-style {
+   list-style-type: none;
+    background-color: $color-white;
+    border-radius: 16px;
+    margin: 14px 14px;
+    box-shadow: $box-shade;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    overflow: hidden;
+    cursor: pointer;
+    transition-duration:400ms ;
+    width: 348px;
+    
+    & div:first-child{
+        overflow: hidden;
+        white-space: nowrap;    
+    }
+    & h3{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding: 14px 0 0 11px;
+
+    }
+    & p{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding: 4px 0 0 11px;
+        font-size: 0.75rem;
+
+    }
+    
+}
+@mixin Price-check-style{
+    display: flex;
+    flex-flow: row;
+    padding: 0;
+    margin-right: -61px;
+    transition:  500ms;
+    & p{
+        align-self: flex-end;
+        margin-right: 25px;
+        margin-left: 5px;
+        font-weight: 900;
+        line-height: 2.2rem;
+    
+    }
+    & i{
+        align-self: center;
+        background-color: $color-tertiary;
+        padding:9px 4px;
+        
+    
+    }
+     & i:before{
+        font-size: 1.05rem;
+        color:$color-white;
+        display: inline-block;
+        margin: 15px;
+        transition-duration: 0ms;
+        transform: rotate(-1turn);
+     }
+}   
+@mixin menu-button-style{
+    width: 187px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 52px;
+    margin-bottom: 48px;
 }

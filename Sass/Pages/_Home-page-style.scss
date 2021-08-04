@@ -37,6 +37,9 @@
         vertical-align: -0.1rem;
     }
     }
+    & ul{
+        @include operate-ul;
+    }
     & li{
         @include operate-li;
         transition-duration: 400ms;
@@ -57,30 +60,21 @@
     
 }
 
-.restaurant-grid{
-    background-color: $color-bck-grd-light;
-    padding-bottom: 50px;
-    padding-top: 20px;
-    & a{
-        text-decoration: none;
-    }
-    & h2{
-        @include HP-h2-style;
-    }
-    & article{
-        display: flex;
-        flex-flow: row wrap;
-        margin:20px 20px 19px 20px;
-        border-radius: 15px;
-        overflow: hidden;
-        position: relative;
-        box-shadow: $box-shade;
-        transition-duration: 400ms;
-        
+main{
+    @include restaurant-main-container-style;
+   }
 
-        &:hover{
-            box-shadow: $button-shade-hover;
-        }}
+.restaurant-grid{    
+display: flex;
+flex-flow: row wrap;
+justify-content: space-evenly;
+    
+    & article{
+        @include restaurant-article;
+        & a{
+            text-decoration: none;
+        }   
+    }
     
     
     &__image{
@@ -93,8 +87,7 @@
     
     
     &__infos{
-        display: flex;
-        flex-direction: column;
+        
         background-color: $color-white;
         width: 100%;
         
@@ -107,7 +100,7 @@
         & .heart{
         position: absolute;
         top:20px;
-        right:30px;
+        right:60px;
         }
         }}
     
