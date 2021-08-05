@@ -1,17 +1,13 @@
  
  /* Media queries */
-@mixin smallScreen{
-    @media screen and (min-width: map-get($breakpoints, small)){
+@mixin mediumScreen{
+    @media screen and (min-width: 760px) and (max-width: 960px){
         @content;
     }
 }
-@mixin middleScreen{
-    @media screen and (min-width: map-get($breakpoints, middle)){
-        @content;
-    }
-}
+
 @mixin largeScreen{
-    @media screen and (min-width: map-get($breakpoints, large)){
+    @media screen and (min-width: 961px){
         @content;
     }
 }
@@ -27,20 +23,22 @@
     font-weight: 900;
     margin: 37px 15px 12px 10px;;
     padding:0px 20px 0 10px;
+    @include largeScreen{
+        width: 350px;
+    }
     
 }
-@mixin HP-h2-operate {
-    font-size: 1.45rem;
-    font-weight: 700;
-    margin: 46px 15px 10px 10px;;
-    padding:0px 20px 0 10px;
-    
-}
+
 @mixin HP-h1-style {
     font-size: 1.15rem;
     font-weight: 300;
     margin: 0 0 14px 0;
     line-height: 21px;
+    @include largeScreen{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 400px;
+    }
 }
 
 
@@ -63,11 +61,28 @@
 /***********************Home Page***********************/
 
 /* .operation*/
+@mixin HP-h2-operate {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin: 46px 15px 10px 10px;;
+    padding:0px 20px 0 10px;
+    @include largeScreen{
+        margin-left: 75px;
+    }
+    @include mediumScreen{
+        margin-bottom:30px;
+    }
+    
+}
 
 @mixin operate-ul{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    @include largeScreen{
+        justify-content: flex-start;
+        flex-flow: column;
+    }
 }
 
 @mixin operate-li{
@@ -80,8 +95,16 @@
     counter-increment: number;
     list-style-type: none;
     transition-duration: 400ms;
-    max-width: 280px;
-    min-width: 280px;
+    width: 280px;
+    @include largeScreen{
+        width: 240px;
+    }
+    @include mediumScreen{
+     width: 110px;
+        padding: 25px 50px;
+     margin: 10px 0;   
+     text-align: center;
+    }
 
 
 }
@@ -97,8 +120,13 @@
     color: #ffff;
     font-size: 0.8rem;
     text-align: center;
-   
     line-height: 1.6rem;
+    @include mediumScreen{
+        left:50%;
+        transform: translateX(-50%);
+        top: -12px;
+        
+    }
 }
 @mixin operate-hover {
     cursor:pointer;
@@ -113,9 +141,17 @@
     background-color: $color-bck-grd-light;
     padding-bottom: 55px;
     padding-top: 10px;
+    @include largeScreen{
+        border-radius: 0 0 0 20px;
+        padding-bottom: 0px;
+        
+    }
     
     & h2{
         @include HP-h2-operate;
+        @include largeScreen{
+            margin-top: 30px;
+        }
     }
 }
 

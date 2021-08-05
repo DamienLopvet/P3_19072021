@@ -3,11 +3,26 @@
    text-align: center;
    background-color: $color-bck-grd-dark;
    box-shadow: $head-shade;
+   @include largeScreen{
+       order: 2;
+       width: 300px;
+       border-radius: 15px;
+       margin-left: 70px;
+       background-color: $color-white;
+       border: 1px solid $color-bck-grd-dark;
+       margin-bottom: 0px;
+       box-shadow: $box-shade;
+       
+   }
     & input{
         border:none;
         background-color: $color-bck-grd-dark;
         padding: 0 10px;
         width: 150px;
+        @include largeScreen{
+            background-color: $color-white;
+        }
+
         &:focus{
             outline: none;
             @include p-bold;

@@ -15,6 +15,9 @@ button{
     background: $gradient;
     position: relative;
     z-index: 1;
+    @include largeScreen{
+        display: none;
+    }
     &::after{
         content:'';
         position: absolute;

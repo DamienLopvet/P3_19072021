@@ -12,13 +12,26 @@ footer{
     }
     & ul{
         list-style-type: none;
+        @include largeScreen{
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+        }
         & li{
             font-size: 1rem;
             padding-top:8px;
             font-family: roboto;
             font-weight: 200;
             color: white;
-            
+            @include largeScreen{
+                margin-right: 20px;
+                border-right:1px solid $color-bck-grd-light;
+                padding-right:20px;
+                padding-top: 0;
+            }
+           &:last-child{
+               border-right: none;
+           } 
         }
     & li:first-child, li:nth-child(2) {
         font-weight: 400;

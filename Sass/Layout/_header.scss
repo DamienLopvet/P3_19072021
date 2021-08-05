@@ -6,4 +6,12 @@ header {
     background-color: $color-white;
     padding-top: 15px;
     padding-bottom: 6px;
+    @include largeScreen{
+        box-shadow: $box-shade;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        font-size: 2.2rem;
+        position: relative;
+        
+    }
 }
