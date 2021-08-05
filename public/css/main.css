@@ -16,6 +16,26 @@
   padding: 0;
 }
 
+::-webkit-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+::-moz-placeholder {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+::-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
 h1, h2, h3, h5, h6, p, span, a, li, button, ::placeholder {
   font-family: "Roboto", sans-serif;
   color: black;
@@ -46,7 +66,8 @@ p {
   right: 0;
   z-index: 10;
   pointer-events: none;
-  animation: loader 3s forwards;
+  -webkit-animation: loader 3s forwards;
+          animation: loader 3s forwards;
 }
 
 .spinner {
@@ -57,49 +78,71 @@ p {
 }
 
 .spinner span {
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: inline-block;
   position: relative;
   top: 0;
-  animation: bounce 0.3s  alternate;
+  -webkit-animation: bounce 0.3s alternate;
+          animation: bounce 0.3s alternate;
   animation-iteration-count: 4;
   -webkit-animation-iteration-count: 4;
   font-family: 'Shrikhand';
   background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding-left: 2px;
+  padding-right: 5px;
+  text-align: center;
+  margin-right: -11px;
 }
 
 .spinner span:nth-child(1) {
-  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 .spinner span:nth-child(2) {
-  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 .spinner span:nth-child(3) {
-  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .spinner span:nth-child(4) {
-  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .spinner span:nth-child(5) {
-  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .spinner span:nth-child(6) {
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .spinner span:nth-child(7) {
-  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .spinner span:nth-child(8) {
-  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+@-webkit-keyframes bounce {
+  from {
+    top: 0;
+  }
+  to {
+    top: -22px;
+  }
 }
 
 @keyframes bounce {
@@ -108,6 +151,18 @@ p {
   }
   to {
     top: -22px;
+  }
+}
+
+@-webkit-keyframes loader {
+  from {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
@@ -124,23 +179,47 @@ p {
 }
 
 article li:nth-child(2) {
-  animation: splash 1100ms normal backwards ease-in-out;
-  animation-delay: 500ms;
+  -webkit-animation: splash 1100ms normal backwards ease-in-out;
+          animation: splash 1100ms normal backwards ease-in-out;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 
 article li:nth-child(3) {
-  animation: splash 1100ms normal backwards ease-in-out;
-  animation-delay: 700ms;
+  -webkit-animation: splash 1100ms normal backwards ease-in-out;
+          animation: splash 1100ms normal backwards ease-in-out;
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
 }
 
 article li:nth-child(4) {
-  animation: splash 1100ms normal backwards ease-in-out;
-  animation-delay: 900ms;
+  -webkit-animation: splash 1100ms normal backwards ease-in-out;
+          animation: splash 1100ms normal backwards ease-in-out;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
 }
 
 article li:nth-child(5) {
-  animation: splash 1300ms normal backwards ease-in-out;
-  animation-delay: 1100ms;
+  -webkit-animation: splash 1300ms normal backwards ease-in-out;
+          animation: splash 1300ms normal backwards ease-in-out;
+  -webkit-animation-delay: 1100ms;
+          animation-delay: 1100ms;
+}
+
+@-webkit-keyframes splash {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes splash {
@@ -202,6 +281,8 @@ article li:nth-child(5) {
 button {
   order: 2;
   align-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   color: #ffff;
   border: none;
@@ -233,6 +314,10 @@ button::after {
 button:hover::after {
   opacity: 1;
   box-shadow: 0px 7px 15px 0px #0000003b;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .presentation {
@@ -375,6 +460,7 @@ button:hover::after {
 
 .restaurant-grid article a {
   text-decoration: none;
+  display: block;
 }
 
 .restaurant-grid__image {
@@ -388,7 +474,7 @@ button:hover::after {
 
 .restaurant-grid__infos {
   background-color: #ffff;
-  width: 100%;
+  width: calc(100% - 30px);
   position: relative;
   padding: 15px 20px 15px 10px;
 }
@@ -400,7 +486,7 @@ button:hover::after {
 .restaurant-grid__infos .heart {
   position: absolute;
   top: 20px;
-  right: 60px;
+  right: 30px;
 }
 
 .new::after {
@@ -436,7 +522,8 @@ header i:before {
 
 .header-img img {
   width: 100%;
-  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
 }
 
 .menu {
@@ -644,9 +731,53 @@ header {
   color: #353535;
 }
 
+.search-form input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+.search-form input:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+.search-form input:focus:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+.search-form input:focus::-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
 .search-form input:focus::placeholder {
   opacity: 0;
   transition: opacity 0.35s ease-in-out;
+}
+
+.search-form input:hover::-webkit-input-placeholder {
+  opacity: 20%;
+  transition-duration: 0.4s;
+}
+
+.search-form input:hover::-moz-placeholder {
+  opacity: 20%;
+  transition-duration: 0.4s;
+}
+
+.search-form input:hover:-ms-input-placeholder {
+  opacity: 20%;
+  transition-duration: 0.4s;
+}
+
+.search-form input:hover::-ms-input-placeholder {
+  opacity: 20%;
+  transition-duration: 0.4s;
 }
 
 .search-form input:hover::placeholder {
@@ -658,6 +789,38 @@ header {
   font-size: 1rem;
   color: #353535;
   vertical-align: 0.1rem;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #353535;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+input::-moz-placeholder {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #353535;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+input:-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #353535;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+input::-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #353535;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
 }
 
 input::placeholder {
