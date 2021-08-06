@@ -39,5 +39,13 @@ button{
 
     }
 }
-
-
+.menu-button{
+    @include menu-button-style;
+    
+}
+.menu-button.button-tablet{
+    display: none;
+    @include mediumScreen{
+display: block;
+    }
+}

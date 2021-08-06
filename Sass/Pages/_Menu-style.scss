@@ -1,22 +1,50 @@
 header {
-    
+    & a{
+        text-decoration: none;
+    }
     & i:before{
     position: absolute;
     left: 23px;
     top: 26px;
-    font-size: 1.2rem;}
-    
+    font-size: 1.2rem;
+   
+@include largeScreen{
+   display: none
+}
+}
+& button{
+    display: none;
+    @include largeScreen{
+      display: block;
+        position: absolute;
+        margin: 0;
+      left: 30px;
+      top: 30px;  
+      
+    }
+} 
+
+
 }
 .header-img{
     @include header-img-style;
     
 }
-
+.large-screen-menu-main{
+    @include mediumScreen{
+    display: flex;
+    flex-flow: row-reverse;
+    }
+}
 .menu{
     @include menu-container-style;
     & h2{
         @include h2-menu-style;
+        
     }
+    @include mediumScreen{
+        width: 50%
+        }
     
     & li{
         @include menu-li-style;
@@ -37,11 +65,10 @@ header {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
-    }
+        
+        
+      
 
-}
+}}
 
-.menu-button{
-    @include menu-button-style;
-    
-}
+

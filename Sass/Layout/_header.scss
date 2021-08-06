@@ -12,6 +12,13 @@ header {
         padding-bottom: 20px;
         font-size: 2.2rem;
         position: relative;
+        z-index: 1;
         
     }
+   @include mediumScreen{
+    box-shadow: $box-shade;
+    position: relative;
+    z-index: 1;
+
+   }
 }

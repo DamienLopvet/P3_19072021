@@ -14,6 +14,10 @@
        box-shadow: $box-shade;
        
    }
+   @include mediumScreen{
+       box-shadow: unset;
+       
+   }
     & input{
         border:none;
         background-color: $color-bck-grd-dark;

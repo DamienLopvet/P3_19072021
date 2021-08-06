@@ -194,10 +194,23 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    @include mediumScreen{
+    position: sticky;
+    top: 20px;
+    width: 50%;
+    margin: 20px;
+    max-height: 300px;
+    border-radius: 20px;
+    overflow: visible;
+    display: block;
+    }
    
     & img{
         width: 100%;
         filter: brightness(90%);
+        @include mediumScreen{
+            border-radius: 20px;
+        }
     }
 }
 
@@ -218,6 +231,12 @@
     &::after{
         @include underline-menu-h2;
         }
+        @include mediumScreen{
+            position: sticky;
+            background-color: $color-bck-grd-light;
+            padding-bottom: 15px;
+            top: 0;
+        }
     }
 
 @mixin underline-menu-h2 {
@@ -226,6 +245,7 @@
         border-bottom: 3px solid $color-tertiary;
         content: '';
         width: 40px;
+        
 }
 
 
@@ -239,6 +259,11 @@
     position: relative;
     background-color: $color-bck-grd-light;
     width: 100%;
+    @include mediumScreen{
+    margin-top: 0;
+    border-radius: 0;
+    }
+    
     & h1{
         @include menu-h1-style; 
     }
@@ -256,7 +281,7 @@
    list-style-type: none;
     background-color: $color-white;
     border-radius: 16px;
-    margin: 14px 13px;
+    margin: 14px 16px;
     box-shadow: $box-shade;
     display: flex;
     flex-flow: row;
@@ -265,6 +290,7 @@
     cursor: pointer;
     transition-duration:400ms ;
     width: 348px;
+   
     
     & div:first-child{
         overflow: hidden;
@@ -274,6 +300,7 @@
         text-overflow: ellipsis;
         overflow: hidden;
         padding: 14px 0 0 11px;
+        
 
     }
     & p{
@@ -322,4 +349,7 @@
     margin-right: auto;
     margin-top: 40px;
     margin-bottom: 50px;
+    @include mediumScreen{
+        display: none;
+    }
 }
