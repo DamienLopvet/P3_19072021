@@ -33,19 +33,12 @@ html{
         background-color: transparent;
         margin-bottom: 0;
         margin: 20px;
-        border: 2px solid;
-        border-image-source: linear-gradient(
-    350deg
-    , #9356dc 0%, #ff79da 100%);
-        border-image-slice: 1;
-        border-width: 3px;
         max-width: 405px;
-        box-shadow: $box-shade
     }
 
     & h2{
         @include HP-h2-presentation;
-        order:0;
+        
     }
     & h1{
         @include HP-h1-style;

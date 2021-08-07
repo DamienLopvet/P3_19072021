@@ -9,7 +9,9 @@ header {
     font-size: 1.2rem;
    
 @include largeScreen{
-   display: none
+   font-size: 1.4rem;
+   left: 33px;
+   top: 45px;
 }
 }
 & button{
@@ -48,7 +50,7 @@ header {
         
     }
     @include mediumScreen{
-        width: 50%
+        width: 52%
         }
         @include largeScreen{
             width: 50%
@@ -71,8 +73,9 @@ header {
     }
     & article{
         display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
+        flex-flow: column;
+        align-items: center;
+       
         
         
       

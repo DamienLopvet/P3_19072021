@@ -320,12 +320,7 @@ html {
     background-color: transparent;
     margin-bottom: 0;
     margin: 20px;
-    border: 2px solid;
-    border-image-source: linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
-    border-image-slice: 1;
-    border-width: 3px;
     max-width: 405px;
-    box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -340,6 +335,7 @@ html {
 @media screen and (min-width: 961px) {
   .presentation h2 {
     width: 350px;
+    margin-top: 20px;
   }
 }
 
@@ -633,7 +629,9 @@ header i:before {
 
 @media screen and (min-width: 961px) {
   header i:before {
-    display: none;
+    font-size: 1.4rem;
+    left: 33px;
+    top: 45px;
   }
 }
 
@@ -665,7 +663,7 @@ header button {
   .header-img {
     position: sticky;
     top: 20px;
-    width: 50%;
+    width: 48%;
     margin: 20px;
     max-height: 375px;
     overflow: visible;
@@ -762,6 +760,7 @@ header button {
   text-transform: uppercase;
   margin-top: 30px;
   padding-left: 20px;
+  width: 348px;
 }
 
 .menu h2::after {
@@ -788,7 +787,7 @@ header button {
 
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .menu {
-    width: 50%;
+    width: 52%;
   }
 }
 
@@ -873,8 +872,8 @@ header button {
 
 .menu article {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  flex-flow: column;
+  align-items: center;
 }
 
 footer {
@@ -1050,6 +1049,13 @@ header {
   font-size: 1rem;
   color: #353535;
   vertical-align: 0.1rem;
+}
+
+@media screen and (min-width: 961px) {
+  .search-form i {
+    color: #9356DC;
+    font-size: 1.2rem;
+  }
 }
 
 input::placeholder {

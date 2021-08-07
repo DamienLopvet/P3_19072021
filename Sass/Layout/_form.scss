@@ -47,6 +47,10 @@
         font-size: 1rem;
         color: $color-fourthary;
         vertical-align: 0.1rem;
+        @include largeScreen{
+            color: $color-primary;
+            font-size: 1.2rem;
+        }
     }
 }
 input::placeholder{
