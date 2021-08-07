@@ -18,9 +18,10 @@ header {
       display: block;
         position: absolute;
         margin: 0;
-      left: 30px;
-      top: 30px;  
-      
+      left: 70px;
+      top: 40PX;
+      font-size: 0.8rem;
+      padding: 12px 12px;      
     }
 } 
 
@@ -35,6 +36,10 @@ header {
     display: flex;
     flex-flow: row-reverse;
     }
+    @include largeScreen{
+        display: flex;
+        flex-flow: row-reverse;
+        }
 }
 .menu{
     @include menu-container-style;
@@ -45,6 +50,9 @@ header {
     @include mediumScreen{
         width: 50%
         }
+        @include largeScreen{
+            width: 50%
+            }
     
     & li{
         @include menu-li-style;

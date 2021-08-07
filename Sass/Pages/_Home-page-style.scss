@@ -32,6 +32,15 @@ html{
         max-width: 500px;
         background-color: transparent;
         margin-bottom: 0;
+        margin: 20px;
+        border: 2px solid;
+        border-image-source: linear-gradient(
+    350deg
+    , #9356dc 0%, #ff79da 100%);
+        border-image-slice: 1;
+        border-width: 3px;
+        max-width: 405px;
+        box-shadow: $box-shade
     }
 
     & h2{
@@ -48,7 +57,7 @@ html{
     margin-bottom: 50px;
     @include largeScreen{
         width: 35%;
-        margin-left: 50px;
+        margin-left: 70px;
         order: 3;
     }
     & h2{

@@ -199,10 +199,17 @@
     top: 20px;
     width: 50%;
     margin: 20px;
-    max-height: 300px;
-    border-radius: 20px;
+    max-height: 375px;
     overflow: visible;
-    display: block;
+    flex-direction: column;
+    }
+    @include largeScreen{
+    position: sticky;
+    top: 20px;
+    width: 50%;
+    margin: 20px;
+    overflow: visible;
+    flex-direction: column;
     }
    
     & img{
@@ -210,6 +217,12 @@
         filter: brightness(90%);
         @include mediumScreen{
             border-radius: 20px;
+            box-shadow: $box-shade;
+        }
+        @include largeScreen{
+            border-radius: 20px;
+            box-shadow: $box-shade;
+            max-width: 600px;
         }
     }
 }
@@ -232,10 +245,12 @@
         @include underline-menu-h2;
         }
         @include mediumScreen{
-            position: sticky;
             background-color: $color-bck-grd-light;
             padding-bottom: 15px;
-            top: 0;
+        }
+        @include largeScreen{
+            background-color: $color-bck-grd-light;
+            padding-bottom: 15px;
         }
     }
 
@@ -263,6 +278,10 @@
     margin-top: 0;
     border-radius: 0;
     }
+    @include largeScreen{
+        margin-top: 0;
+        border-radius: 0;
+        }
     
     & h1{
         @include menu-h1-style; 
@@ -350,6 +369,9 @@
     margin-top: 40px;
     margin-bottom: 50px;
     @include mediumScreen{
+        display: none;
+    }
+    @include largeScreen{
         display: none;
     }
 }

@@ -260,11 +260,23 @@ button:hover::after {
   }
 }
 
+@media screen and (min-width: 961px) {
+  .menu-button {
+    display: none;
+  }
+}
+
 .menu-button.button-tablet {
   display: none;
 }
 
 @media screen and (min-width: 760px) and (max-width: 960px) {
+  .menu-button.button-tablet {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 961px) {
   .menu-button.button-tablet {
     display: block;
   }
@@ -307,6 +319,13 @@ html {
     max-width: 500px;
     background-color: transparent;
     margin-bottom: 0;
+    margin: 20px;
+    border: 2px solid;
+    border-image-source: linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    max-width: 405px;
+    box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -347,7 +366,7 @@ html {
 @media screen and (min-width: 961px) {
   .operation {
     width: 35%;
-    margin-left: 50px;
+    margin-left: 70px;
     order: 3;
   }
 }
@@ -627,8 +646,10 @@ header button {
     display: block;
     position: absolute;
     margin: 0;
-    left: 30px;
-    top: 30px;
+    left: 70px;
+    top: 40PX;
+    font-size: 0.8rem;
+    padding: 12px 12px;
   }
 }
 
@@ -646,10 +667,20 @@ header button {
     top: 20px;
     width: 50%;
     margin: 20px;
-    max-height: 300px;
-    border-radius: 20px;
+    max-height: 375px;
     overflow: visible;
-    display: block;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .header-img {
+    position: sticky;
+    top: 20px;
+    width: 50%;
+    margin: 20px;
+    overflow: visible;
+    flex-direction: column;
   }
 }
 
@@ -661,10 +692,26 @@ header button {
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .header-img img {
     border-radius: 20px;
+    box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .header-img img {
+    border-radius: 20px;
+    box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
+    max-width: 600px;
   }
 }
 
 @media screen and (min-width: 760px) and (max-width: 960px) {
+  .large-screen-menu-main {
+    display: flex;
+    flex-flow: row-reverse;
+  }
+}
+
+@media screen and (min-width: 961px) {
   .large-screen-menu-main {
     display: flex;
     flex-flow: row-reverse;
@@ -682,6 +729,13 @@ header button {
 }
 
 @media screen and (min-width: 760px) and (max-width: 960px) {
+  .menu {
+    margin-top: 0;
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 961px) {
   .menu {
     margin-top: 0;
     border-radius: 0;
@@ -720,14 +774,25 @@ header button {
 
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .menu h2 {
-    position: sticky;
     background-color: #f6f6f6;
     padding-bottom: 15px;
-    top: 0;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .menu h2 {
+    background-color: #f6f6f6;
+    padding-bottom: 15px;
   }
 }
 
 @media screen and (min-width: 760px) and (max-width: 960px) {
+  .menu {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 961px) {
   .menu {
     width: 50%;
   }
@@ -937,7 +1002,7 @@ header {
     order: 2;
     width: 300px;
     border-radius: 15px;
-    margin-left: 70px;
+    margin-left: 95px;
     background-color: #ffff;
     border: 1px solid #eaeaea;
     margin-bottom: 0px;
