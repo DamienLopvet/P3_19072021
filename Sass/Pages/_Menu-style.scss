@@ -62,10 +62,7 @@ header {
             @include Price-check-style;
             }
 
-    &:hover .price-check{
-            margin-right: 0px;
-              
-          }
+    
     &:hover i:before{
             transform: rotate(0turn);
             transition-duration: 500ms;

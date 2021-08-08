@@ -812,6 +812,10 @@ header button {
   width: 348px;
 }
 
+.menu li:hover .price-check {
+  margin-right: 0px;
+}
+
 .menu li div:first-child {
   overflow: hidden;
   white-space: nowrap;
@@ -859,10 +863,6 @@ header button {
   margin: 15px;
   transition-duration: 0ms;
   transform: rotate(-1turn);
-}
-
-.menu li:hover .price-check {
-  margin-right: 0px;
 }
 
 .menu li:hover i:before {
