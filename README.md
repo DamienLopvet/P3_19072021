@@ -1,6 +1,6 @@
 # P3_19072021
 lien git page :
-https://damienlopvet.github.io/P3_19072021/La%20palette%20du%20go%C3%BBt.html
+https://damienlopvet.github.io/P3_19072021/index.html
 
 <strong>Projet 3/7 de la formation Openclassroom "développeur Web".</strong>
 
