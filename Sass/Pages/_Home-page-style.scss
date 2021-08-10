@@ -129,7 +129,12 @@ justify-content: space-evenly;
         & a{
             text-decoration: none;
             display: block;
-        }   
+        }  
+        & .heart{
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+        } 
     }
     
     
@@ -152,11 +157,7 @@ justify-content: space-evenly;
             padding-top: 2px;
         }
     
-        & .heart{
-        position: absolute;
-        top:20px;
-        right:30px;
-        }
+       
         }}
     
 
