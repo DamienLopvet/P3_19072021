@@ -1,202 +1,192 @@
- 
- /* Media queries */
-@mixin mediumScreen{
-    @media screen and (min-width: 760px) and (max-width: 960px){
-        @content;
-    }
+/* Media queries */
+@mixin mediumScreen {
+  @media screen and (min-width: 760px) and (max-width: 960px) {
+    @content;
+  }
 }
 
-@mixin largeScreen{
-    @media screen and (min-width: 961px){
-        @content;
-    }
+@mixin largeScreen {
+  @media screen and (min-width: 961px) {
+    @content;
+  }
 }
 
 /* font properties*/
-@mixin p-bold{
-    font-size: 1rem;
-    font-weight: 700;
-    color: $color-fourthary;
-} 
-@mixin HP-h2-presentation {
-    font-size: 1.45rem;
-    font-weight: 900;
-    margin: 37px 15px 12px 10px;;
-    padding:0px 20px 0 10px;
-    order:0;
-    @include largeScreen{
-        width: 350px;
-        margin-top: 20px;
-    }
-    
+@mixin p-bold {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $color-fourthary;
 }
+@mixin HP-h2-presentation {
+  font-size: 1.45rem;
+  font-weight: 900;
+  margin: 37px 15px 12px 10px;
+  padding: 0px 20px 0 10px;
+  order: 0;
+  @include largeScreen {
+    width: 350px;
+    margin-top: 20px;
+  }
+}
+
+
+
+/* gradient properties*/
+
+@mixin heart-gradient {
+  background: rgb(147, 86, 220);
+  background: -webkit-linear-gradient(
+    350deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 218, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/***********************Home Page***********************/
 
 @mixin HP-h1-style {
     font-size: 1.15rem;
     font-weight: 300;
     margin: 0 0 14px 0;
     line-height: 21px;
-    @include largeScreen{
-        margin-bottom: 10px;
-        margin-top: 10px;
-        width: 400px;
+    @include largeScreen {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      width: 400px;
     }
-}
-
-
-
-
-
-/* gradient properties*/
-
-
-
-
-@mixin heart-gradient{
-    background: rgb(147,86,220);
-    background: -webkit-linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/***********************Home Page***********************/
+  }
 
 /* .operation*/
 @mixin HP-h2-operate {
-    font-size: 1.45rem;
-    font-weight: 700;
-    margin: 46px 15px 10px 10px;;
-    padding:0px 20px 0 10px;
-    @include largeScreen{
-        margin-left: 75px;
-    }
-    @include mediumScreen{
-        margin-bottom:30px;
-    }
-    
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 46px 15px 10px 10px;
+  padding: 0px 20px 0 10px;
+  @include largeScreen {
+    margin-left: 75px;
+  }
+  @include mediumScreen {
+    margin-bottom: 30px;
+  }
 }
 
-@mixin operate-ul{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    @include largeScreen{
-        justify-content: flex-start;
-        flex-flow: column;
-    }
+@mixin operate-ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  @include largeScreen {
+    justify-content: flex-start;
+    flex-flow: column;
+  }
 }
 
-@mixin operate-li{
-    position: relative;
-    background-color: $color-bck-grd-light;
-    margin: 10px 20px 18px 30px;
-    padding: 27px 25px 25px 25px;
-    border-radius: 20px;
-    box-shadow: $box-shade;  
-    counter-increment: number;
-    list-style-type: none;
-    transition-duration: 400ms;
-    width: 280px;
-    @include largeScreen{
-        width: 240px;
-    }
-    @include mediumScreen{
-     width: 110px;
-        padding: 25px 50px;
-     margin: 10px 0;   
-     text-align: center;
-    }
-
-
-}
-@mixin counter-li-HP{
-    content: counter(number) " ";
-    position: absolute;
-    left: -12px;
-    bottom: 21px;
-    background-color: #9356DC;
-    border-radius: 20px;
-    height: 24px;
-    width: 24px;
-    color: #ffff;
-    font-size: 0.8rem;
+@mixin operate-li {
+  position: relative;
+  background-color: $color-bck-grd-light;
+  margin: 10px 20px 18px 30px;
+  padding: 27px 25px 25px 25px;
+  border-radius: 20px;
+  box-shadow: $box-shade;
+  counter-increment: number;
+  list-style-type: none;
+  transition-duration: 400ms;
+  width: 280px;
+  @include largeScreen {
+    width: 240px;
+  }
+  @include mediumScreen {
+    width: 110px;
+    padding: 25px 50px;
+    margin: 10px 0;
     text-align: center;
-    line-height: 1.6rem;
-    @include mediumScreen{
-        left:50%;
-        transform: translateX(-50%);
-        top: -12px;
-        
-    }
+  }
+}
+@mixin counter-li-HP {
+  content: counter(number) " ";
+  position: absolute;
+  left: -12px;
+  bottom: 21px;
+  background-color: #9356dc;
+  border-radius: 20px;
+  height: 24px;
+  width: 24px;
+  color: #ffff;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 1.6rem;
+  @include mediumScreen {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -12px;
+  }
 }
 @mixin operate-hover {
-    cursor:pointer;
-    background-color: $color-primary-lighten;
-    box-shadow: $button-shade-hover;
-
+  cursor: pointer;
+  background-color: $color-primary-lighten;
+  box-shadow: $button-shade-hover;
 }
 
 /*restaurant-style*/
 
 @mixin restaurant-main-container-style {
-    background-color: $color-bck-grd-light;
-    padding-bottom: 55px;
-    padding-top: 10px;
-    @include largeScreen{
-        border-radius: 0 0 0 20px;
-        padding-bottom: 0px;
-        
+  background-color: $color-bck-grd-light;
+  padding-bottom: 55px;
+  padding-top: 10px;
+  @include largeScreen {
+    border-radius: 0 0 0 20px;
+    padding-bottom: 0px;
+  }
+
+  & h2 {
+    @include HP-h2-operate;
+    @include largeScreen {
+      margin-top: 30px;
     }
-    
-    & h2{
-        @include HP-h2-operate;
-        @include largeScreen{
-            margin-top: 30px;
-        }
-    }
+  }
 }
 
 @mixin restaurant-article {
-    margin:10px 20px ;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: $box-shade;
-    transition-duration: 400ms;
-    width: 337px;
-        
-        &:hover{
-            box-shadow: $button-shade-hover;
-        }
+  margin: 10px 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: $box-shade;
+  transition-duration: 400ms;
+  width: 337px;
+
+  &:hover {
+    box-shadow: $button-shade-hover;
+  }
 }
 
 @mixin new-style {
-    display: block;
-    content:'Nouveau';
-    color: $color-tertiary-dark;
-    position: absolute;
-    top: 14px;
-    right: 12px;
-    border-radius: 2px;
-    background-color: $color-tertiary;
-    padding:7px 12px;
-    font-family: Roboto;
-    font-weight: 500;
-    font-size: 0.85em;
-    box-shadow: $box-shade;
+  display: block;
+  content: "Nouveau";
+  color: $color-tertiary-dark;
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  border-radius: 2px;
+  background-color: $color-tertiary;
+  padding: 7px 12px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 0.85em;
+  box-shadow: $box-shade;
 }
-
 
 /*****************************Menu-Pages******************/
 /*Menu style*/
 @mixin header-img-style {
-    width: 100%;
-    max-height: 400px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    @include mediumScreen{
+  width: 100%;
+  max-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @include mediumScreen {
     position: sticky;
     top: 20px;
     width: 48%;
@@ -204,180 +194,166 @@
     max-height: 375px;
     overflow: visible;
     flex-direction: column;
-    }
-    @include largeScreen{
+  }
+  @include largeScreen {
+    padding-bottom: 80px;
     position: sticky;
     top: 20px;
     width: 50%;
     margin: 20px;
     overflow: visible;
     flex-direction: column;
+  }
+
+  & img {
+    width: 100%;
+    filter: brightness(90%);
+    @include mediumScreen {
+      border-radius: 20px;
+      box-shadow: $box-shade;
     }
-   
-    & img{
-        width: 100%;
-        filter: brightness(90%);
-        @include mediumScreen{
-            border-radius: 20px;
-            box-shadow: $box-shade;
-        }
-        @include largeScreen{
-            border-radius: 20px;
-            box-shadow: $box-shade;
-            max-width: 600px;
-        }
+    @include largeScreen {
+      border-radius: 20px;
+      box-shadow: $box-shade;
+      max-width: 600px;
     }
+  }
 }
 
-@mixin menu-h1-style{
-    font-family: $head-foot-font;
-    font-weight: 500;
-    font-size: 1.8rem;
-    padding-left: 20px;
-    position: relative;
+@mixin menu-h1-style {
+  font-family: $head-foot-font;
+  font-weight: 500;
+  font-size: 1.8rem;
+  padding-left: 20px;
+  position: relative;
 }
 
 @mixin h2-menu-style {
-    font-weight: 400;
-    font-size: 1rem;
-    text-transform: uppercase;
-    margin-top: 30px;
-    padding-left: 20px;
-    width: 348px;
-    &::after{
-        @include underline-menu-h2;
-        }
-        @include mediumScreen{
-            background-color: $color-bck-grd-light;
-            padding-bottom: 15px;
-        }
-        @include largeScreen{
-            background-color: $color-bck-grd-light;
-            padding-bottom: 15px;
-        }
-    }
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 30px;
+  padding-left: 20px;
+  width: 348px;
+  &::after {
+    @include underline-menu-h2;
+  }
+  @include mediumScreen {
+    background-color: $color-bck-grd-light;
+    padding-bottom: 15px;
+  }
+  @include largeScreen {
+    background-color: $color-bck-grd-light;
+    padding-bottom: 15px;
+  }
+}
 
 @mixin underline-menu-h2 {
-        display: block;
-        padding-top: 4px;
-        border-bottom: 3px solid $color-tertiary;
-        content: '';
-        width: 40px;
-        
+  display: block;
+  padding-top: 4px;
+  border-bottom: 3px solid $color-tertiary;
+  content: "";
+  width: 40px;
 }
-
-
-
 
 @mixin menu-container-style {
-    padding:30px 0;
-    border-radius: 40px 40px 0 0;
-    overflow: hidden;
-    margin-top: -35px;
-    position: relative;
-    background-color: $color-bck-grd-light;
-    width: 100%;
-    @include mediumScreen{
+  padding: 30px 0;
+  border-radius: 40px 40px 0 0;
+  overflow: hidden;
+  margin-top: -35px;
+  position: relative;
+  background-color: $color-bck-grd-light;
+  width: 100%;
+  @include mediumScreen {
     margin-top: 0;
     border-radius: 0;
-    }
-    @include largeScreen{
-        margin-top: 0;
-        border-radius: 0;
-        }
-    
-    & h1{
-        @include menu-h1-style; 
-    }
-    & .heart-menu{
-            position: absolute;
-            top: 40px;
-            right: 38px;
-        }
-    }
+  }
+  @include largeScreen {
+    margin-top: 0;
+    border-radius: 0;
+  }
 
-    
- 
+  & h1 {
+    @include menu-h1-style;
+  }
+  & .heart-menu {
+    position: absolute;
+    top: 40px;
+    right: 38px;
+  }
+}
 
 @mixin menu-li-style {
-   list-style-type: none;
-    background-color: $color-white;
-    border-radius: 16px;
-    margin: 14px 16px;
-    box-shadow: $box-shade;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+  list-style-type: none;
+  background-color: $color-white;
+  border-radius: 16px;
+  margin: 14px 16px;
+  box-shadow: $box-shade;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 400ms;
+  width: 348px;
+  &:hover .price-check {
+    margin-right: 0px;
+  }
+
+  & div:first-child {
     overflow: hidden;
-    cursor: pointer;
-    transition-duration:400ms ;
-    width: 348px;
-    &:hover .price-check{
-        margin-right: 0px;
-          
-      }
-    
-    & div:first-child{
-        overflow: hidden;
-        white-space: nowrap;    
-    }
-    & h3{
-        text-overflow: ellipsis;
-        overflow: hidden;
-        padding: 14px 0 0 11px;
-        
-
-    }
-    & p{
-        text-overflow: ellipsis;
-        overflow: hidden;
-        padding: 3px 0 11px 11px;
-        font-size: 0.95rem;
-
-    }
-    
+    white-space: nowrap;
+  }
+  & h3 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 14px 0 0 11px;
+  }
+  & p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 3px 0 11px 11px;
+    font-size: 0.95rem;
+  }
 }
-@mixin Price-check-style{
-    display: flex;
-    flex-flow: row;
-    padding: 0;
-    margin-right: -61px;
-    transition:  500ms;
-    & p{
-        align-self: flex-end;
-        margin-right: 25px;
-        margin-left: 5px;
-        font-weight: 900;
-        line-height: 1rem;
-    
-    }
-    & i{
-        align-self: center;
-        background-color: $color-tertiary;
-        padding:11px 4px;
-        
-    
-    }
-     & i:before{
-        font-size: 1.05rem;
-        color:$color-white;
-        display: inline-block;
-        margin: 15px;
-        transition-duration: 0ms;
-        transform: rotate(-1turn);
-     }
-}   
-@mixin menu-button-style{
-    width: 187px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    margin-bottom: 50px;
-    @include mediumScreen{
-        display: none;
-    }
-    @include largeScreen{
-        display: none;
-    }
+@mixin Price-check-style {
+  display: flex;
+  flex-flow: row;
+  padding: 0;
+  margin-right: -61px;
+  transition: 500ms;
+  & p {
+    align-self: flex-end;
+    margin-right: 25px;
+    margin-left: 5px;
+    font-weight: 900;
+    line-height: 1rem;
+  }
+  & i {
+    align-self: center;
+    background-color: $color-tertiary;
+    padding: 11px 4px;
+  }
+  & i:before {
+    font-size: 1.05rem;
+    color: $color-white;
+    display: inline-block;
+    margin: 15px;
+    transition-duration: 0ms;
+    transform: rotate(-1turn);
+  }
+}
+@mixin menu-button-style {
+  width: 187px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  @include mediumScreen {
+    display: none;
+  }
+  @include largeScreen {
+    display: none;
+  }
 }
