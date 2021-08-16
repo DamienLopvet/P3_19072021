@@ -1,0 +1,24 @@
+.home-page-header {
+    animation: smooth-appearing 2000ms backwards;
+    animation-delay: 2200ms;
+  }
+  .menu-page-header {
+      animation: smooth-appearing 750ms backwards;
+      animation-delay: 250ms;
+    }
+  .large-screen-main {
+    animation: smooth-appearing 1300ms backwards;
+    animation-delay: 2500ms;
+  }
+  .large-screen-menu-main {
+    animation: smooth-appearing 1015ms backwards;
+    animation-delay: 250ms;
+  }
+  @keyframes smooth-appearing {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
