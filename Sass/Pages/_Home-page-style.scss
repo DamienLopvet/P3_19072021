@@ -49,7 +49,6 @@ html{
 .operation{
     margin-bottom: 50px;
     @include largeScreen{
-        width: 35%;
         margin-left: 70px;
         order: 3;
     }
@@ -82,7 +81,6 @@ html{
     }
     & li{
         @include operate-li;
-        transition-duration: 400ms;
         & h3{
             font-size: 1rem;
         }

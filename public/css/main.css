@@ -390,7 +390,6 @@ html {
 
 @media screen and (min-width: 961px) {
   .operation {
-    width: 35%;
     margin-left: 70px;
     order: 3;
   }
@@ -465,7 +464,6 @@ html {
   list-style-type: none;
   transition-duration: 400ms;
   width: 280px;
-  transition-duration: 400ms;
 }
 
 @media screen and (min-width: 961px) {
@@ -840,6 +838,10 @@ header button {
   cursor: pointer;
   transition-duration: 400ms;
   width: 348px;
+}
+
+.menu li:hover {
+  box-shadow: 0px 7px 15px 0px #0000003b;
 }
 
 .menu li:hover .price-check {

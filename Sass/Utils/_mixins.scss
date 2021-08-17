@@ -180,6 +180,7 @@
 
 /*****************************Menu-Pages******************/
 /*Menu style*/
+
 @mixin header-img-style {
   width: 100%;
   max-height: 400px;
@@ -296,9 +297,12 @@
   cursor: pointer;
   transition-duration: 400ms;
   width: 348px;
-  &:hover .price-check {
+  &:hover{
+    box-shadow: $button-shade-hover;
+  
+  & .price-check {
     margin-right: 0px;
-  }
+  }}
 
   & div:first-child {
     overflow: hidden;
