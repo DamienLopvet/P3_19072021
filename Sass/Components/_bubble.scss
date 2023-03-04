@@ -1,0 +1,65 @@
+.bubbleInfo {
+    position: absolute;
+    width: 170px;
+    background-color: #a25bdb;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 1;
+    transition: all 300ms;
+    bottom: 70px;
+    left: 10%;
+    z-index: 10;
+    
+    & p {
+        color: white;
+    }
+
+    &:before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 24px solid #a25bdb;
+        border-right: 12px solid transparent;
+        border-top: 12px solid #a25bdb;
+        border-bottom: 20px solid transparent;
+        left: 18px;
+        top: 120px;
+
+    }
+}
+.search-form .bubbleInfo{
+    top: 55px;
+    left:30%;
+    bottom:unset;
+
+    &:before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-right: 24px solid #a25bdb;
+        border-left: 12px solid transparent;
+        border-bottom: 12px solid #a25bdb;
+        border-top: 20px solid transparent;
+        left: 18px;
+        top: -20px;
+
+        @include largeScreen { 
+            border-left: 24px solid #a25bdb;
+            border-right: 12px solid transparent;
+            border-top: 12px solid #a25bdb;
+            border-bottom: 20px solid transparent;
+            left: 18px;
+            bottom: -20px;
+            top:unset;
+        }
+    }
+
+    @include largeScreen {
+    bottom:50px;
+    top: unset;
+    left: 40%;
+    z-index: 10;
+    }
+}

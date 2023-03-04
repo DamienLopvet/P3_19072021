@@ -63,10 +63,6 @@ header {
             }
 
     
-    &:hover i:before{
-            transform: rotate(0turn);
-            transition-duration: 500ms;
-        }
     }
     & article{
         display: flex;

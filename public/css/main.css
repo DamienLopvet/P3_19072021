@@ -46,6 +46,7 @@ p {
   right: 0;
   z-index: 10;
   pointer-events: none;
+  -webkit-animation: loader 3s forwards;
   animation: loader 3s forwards;
 }
 
@@ -55,12 +56,12 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .spinner span {
   font-size: 2rem;
   display: inline-block;
   position: relative;
   top: 0;
+  -webkit-animation: bounce 0.3s alternate;
   animation: bounce 0.3s alternate;
   animation-iteration-count: 4;
   -webkit-animation-iteration-count: 4;
@@ -75,37 +76,53 @@ p {
 }
 
 span:nth-child(1n) {
+  -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
 }
 
 span:nth-child(2n) {
+  -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
 
 span:nth-child(3n) {
+  -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
 
 span:nth-child(4n) {
+  -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
 
 span:nth-child(5n) {
+  -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
 span:nth-child(6n) {
+  -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
 
 span:nth-child(7n) {
+  -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
 
 span:nth-child(8n) {
+  -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
 
+@-webkit-keyframes bounce {
+  from {
+    top: 0;
+  }
+  to {
+    top: -22px;
+  }
+}
 @keyframes bounce {
   from {
     top: 0;
@@ -114,7 +131,17 @@ span:nth-child(8n) {
     top: -22px;
   }
 }
-
+@-webkit-keyframes loader {
+  from {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 @keyframes loader {
   from {
     opacity: 1;
@@ -126,27 +153,46 @@ span:nth-child(8n) {
     opacity: 0;
   }
 }
-
 article li {
+  -webkit-animation: splash 1100ms normal backwards ease-in-out;
   animation: splash 1100ms normal backwards ease-in-out;
 }
 
 article li:nth-child(1n) {
+  -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
 
 article li:nth-child(2n) {
+  -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
 
 article li:nth-child(3n) {
+  -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
 
 article li:nth-child(4n) {
+  -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
 
+@-webkit-keyframes splash {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 @keyframes splash {
   from {
     transform: translateY(15px);
@@ -162,7 +208,6 @@ article li:nth-child(4n) {
     transform: translateY(0px);
   }
 }
-
 .heartsecond {
   font-size: 1.35rem;
   transform: scaleY(1.02);
@@ -172,8 +217,8 @@ article li:nth-child(4n) {
   bottom: 0;
   left: 0;
   font-weight: 900 !important;
-  background: #9356dc;
-  background: -webkit-linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
+  background: rgb(147, 86, 220);
+  background: -webkit-linear-gradient(350deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
   -webkit-background-clip: text;
   background-clip: text;
@@ -193,11 +238,9 @@ article li:nth-child(4n) {
   cursor: pointer;
   color: #353535;
 }
-
 .heartfirst:hover {
   color: #f6f6f6;
 }
-
 .heartfirst:hover .heartsecond {
   opacity: 1;
   z-index: 2;
@@ -231,32 +274,31 @@ article li:nth-child(4n) {
     opacity: 1;
   }
 }
-
 button {
   order: 2;
   align-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
-  color: #ffff;
+  color: white;
   border: none;
   font-size: 1rem;
   margin: 15px 0 38px 0;
   padding: 15px 20px;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0px 3px 22px -5px #00000078;
-  background: linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
+  box-shadow: 0px 3px 22px -5px rgba(0, 0, 0, 0.4705882353);
+  background: linear-gradient(350deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   position: relative;
   z-index: 1;
 }
-
 @media screen and (min-width: 961px) {
   button {
     display: none;
   }
 }
-
 button::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   background: linear-gradient(350deg, #9356dc 0%, #ff79da 80%);
@@ -268,10 +310,9 @@ button::after {
   transition: 400ms;
   border-radius: 30px;
 }
-
 button:hover::after {
   opacity: 1;
-  box-shadow: 0px 7px 15px 0px #0000003b;
+  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.231372549);
 }
 
 .menu-button {
@@ -282,13 +323,11 @@ button:hover::after {
   margin-top: 40px;
   margin-bottom: 50px;
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .menu-button {
     display: none;
   }
 }
-
 @media screen and (min-width: 961px) {
   .menu-button {
     display: none;
@@ -298,16 +337,79 @@ button:hover::after {
 .menu-button.button-tablet {
   display: none;
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .menu-button.button-tablet {
     display: block;
   }
 }
-
 @media screen and (min-width: 961px) {
   .menu-button.button-tablet {
     display: block;
+  }
+}
+
+.bubbleInfo {
+  position: absolute;
+  width: 170px;
+  background-color: #a25bdb;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 1;
+  transition: all 300ms;
+  bottom: 70px;
+  left: 10%;
+  z-index: 10;
+}
+.bubbleInfo p {
+  color: white;
+}
+.bubbleInfo:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid #a25bdb;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #a25bdb;
+  border-bottom: 20px solid transparent;
+  left: 18px;
+  top: 120px;
+}
+
+.search-form .bubbleInfo {
+  top: 55px;
+  left: 30%;
+  bottom: unset;
+}
+.search-form .bubbleInfo:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-right: 24px solid #a25bdb;
+  border-left: 12px solid transparent;
+  border-bottom: 12px solid #a25bdb;
+  border-top: 20px solid transparent;
+  left: 18px;
+  top: -20px;
+}
+@media screen and (min-width: 961px) {
+  .search-form .bubbleInfo:before {
+    border-left: 24px solid #a25bdb;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #a25bdb;
+    border-bottom: 20px solid transparent;
+    left: 18px;
+    bottom: -20px;
+    top: unset;
+  }
+}
+@media screen and (min-width: 961px) {
+  .search-form .bubbleInfo {
+    bottom: 50px;
+    top: unset;
+    left: 40%;
+    z-index: 10;
   }
 }
 
@@ -342,7 +444,6 @@ html {
   margin-bottom: 15px;
   text-align: center;
 }
-
 @media screen and (min-width: 961px) {
   .presentation {
     max-width: 500px;
@@ -352,7 +453,6 @@ html {
     max-width: 405px;
   }
 }
-
 .presentation h2 {
   font-size: 1.45rem;
   font-weight: 900;
@@ -360,14 +460,12 @@ html {
   padding: 0px 20px 0 10px;
   order: 0;
 }
-
 @media screen and (min-width: 961px) {
   .presentation h2 {
     width: 350px;
     margin-top: 20px;
   }
 }
-
 .presentation h1 {
   font-size: 1.15rem;
   font-weight: 300;
@@ -375,7 +473,6 @@ html {
   line-height: 21px;
   order: 1;
 }
-
 @media screen and (min-width: 961px) {
   .presentation h1 {
     margin-bottom: 10px;
@@ -387,42 +484,35 @@ html {
 .operation {
   margin-bottom: 50px;
 }
-
 @media screen and (min-width: 961px) {
   .operation {
     margin-left: 70px;
     order: 3;
   }
 }
-
 .operation h2 {
   font-size: 1.45rem;
   font-weight: 700;
   margin: 46px 15px 10px 10px;
   padding: 0px 20px 0 10px;
 }
-
 @media screen and (min-width: 961px) {
   .operation h2 {
     margin-left: 75px;
   }
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .operation h2 {
     margin-bottom: 30px;
   }
 }
-
 .operation ul {
   margin-top: 15px;
 }
-
 .operation i {
   color: grey;
   padding: 0 20px 0 10px;
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .operation i {
     padding: 0 0 10px 0;
@@ -430,29 +520,24 @@ html {
     font-size: 1.8rem !important;
   }
 }
-
 .operation i.fa-mobile-alt {
   font-size: 1.2rem;
 }
-
 .operation i.fa-list {
   font-size: 1.1rem;
   vertical-align: -0.1rem;
 }
-
 .operation ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
-
 @media screen and (min-width: 961px) {
   .operation ul {
     justify-content: flex-start;
     flex-flow: column;
   }
 }
-
 .operation li {
   position: relative;
   background-color: #f6f6f6;
@@ -465,13 +550,11 @@ html {
   transition-duration: 400ms;
   width: 280px;
 }
-
 @media screen and (min-width: 961px) {
   .operation li {
     width: 240px;
   }
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .operation li {
     width: 110px;
@@ -480,11 +563,9 @@ html {
     text-align: center;
   }
 }
-
 .operation li h3 {
   font-size: 1rem;
 }
-
 .operation li::before {
   content: counter(number) " ";
   position: absolute;
@@ -494,12 +575,11 @@ html {
   border-radius: 20px;
   height: 24px;
   width: 24px;
-  color: #ffff;
+  color: white;
   font-size: 0.8rem;
   text-align: center;
   line-height: 1.6rem;
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .operation li::before {
     left: 50%;
@@ -507,13 +587,11 @@ html {
     top: -12px;
   }
 }
-
 .operation li:hover {
   cursor: pointer;
   background-color: #f2eafb;
-  box-shadow: 0px 7px 15px 0px #0000003b;
+  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.231372549);
 }
-
 .operation li:hover i {
   color: #9356DC;
 }
@@ -523,33 +601,28 @@ html {
   padding-bottom: 55px;
   padding-top: 10px;
 }
-
 @media screen and (min-width: 961px) {
   .restaurants {
     border-radius: 0 0 0 20px;
     padding-bottom: 0px;
   }
 }
-
 .restaurants h2 {
   font-size: 1.45rem;
   font-weight: 700;
   margin: 46px 15px 10px 10px;
   padding: 0px 20px 0 10px;
 }
-
 @media screen and (min-width: 961px) {
   .restaurants h2 {
     margin-left: 75px;
   }
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .restaurants h2 {
     margin-bottom: 30px;
   }
 }
-
 @media screen and (min-width: 961px) {
   .restaurants h2 {
     margin-top: 30px;
@@ -562,10 +635,8 @@ html {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .restaurant-grid {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .restaurant-grid {
@@ -573,7 +644,6 @@ html {
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
-
 @media screen and (min-width: 961px) {
   .restaurant-grid {
     overflow-y: scroll;
@@ -581,7 +651,6 @@ html {
     padding-bottom: 35px;
   }
 }
-
 .restaurant-grid article {
   margin: 10px 20px;
   border-radius: 15px;
@@ -591,38 +660,31 @@ html {
   transition-duration: 400ms;
   width: 337px;
 }
-
 .restaurant-grid article:hover {
-  box-shadow: 0px 7px 15px 0px #0000003b;
+  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.231372549);
 }
-
 .restaurant-grid article a {
   text-decoration: none;
   display: block;
 }
-
 .restaurant-grid article .heart {
   position: absolute;
   bottom: 30px;
   right: 30px;
 }
-
 .restaurant-grid__image {
   height: 170px;
 }
-
 .restaurant-grid__image img {
   width: 100%;
   transform: translateY(-30px);
 }
-
 .restaurant-grid__infos {
-  background-color: #ffff;
+  background-color: white;
   width: calc(100% - 30px);
   position: relative;
   padding: 15px 20px 15px 10px;
 }
-
 .restaurant-grid__infos p {
   padding-top: 2px;
 }
@@ -646,14 +708,12 @@ html {
 header a {
   text-decoration: none;
 }
-
 header i:before {
   position: absolute;
   left: 23px;
   top: 26px;
   font-size: 1.2rem;
 }
-
 @media screen and (min-width: 961px) {
   header i:before {
     font-size: 1.4rem;
@@ -661,11 +721,9 @@ header i:before {
     top: 45px;
   }
 }
-
 header button {
   display: none;
 }
-
 @media screen and (min-width: 961px) {
   header button {
     display: block;
@@ -685,7 +743,6 @@ header button {
   align-items: center;
   overflow: hidden;
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .header-img {
     position: sticky;
@@ -697,7 +754,6 @@ header button {
     flex-direction: column;
   }
 }
-
 @media screen and (min-width: 961px) {
   .header-img {
     padding-bottom: 80px;
@@ -709,19 +765,16 @@ header button {
     flex-direction: column;
   }
 }
-
 .header-img img {
   width: 100%;
   filter: brightness(90%);
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .header-img img {
     border-radius: 20px;
     box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
   }
 }
-
 @media screen and (min-width: 961px) {
   .header-img img {
     border-radius: 20px;
@@ -736,7 +789,6 @@ header button {
     flex-flow: row-reverse;
   }
 }
-
 @media screen and (min-width: 961px) {
   .large-screen-menu-main {
     display: flex;
@@ -753,21 +805,18 @@ header button {
   background-color: #f6f6f6;
   width: 100%;
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .menu {
     margin-top: 0;
     border-radius: 0;
   }
 }
-
 @media screen and (min-width: 961px) {
   .menu {
     margin-top: 0;
     border-radius: 0;
   }
 }
-
 .menu h1 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;
@@ -775,13 +824,11 @@ header button {
   padding-left: 20px;
   position: relative;
 }
-
 .menu .heart-menu {
   position: absolute;
   top: 40px;
   right: 38px;
 }
-
 .menu h2 {
   font-weight: 400;
   font-size: 1rem;
@@ -790,7 +837,6 @@ header button {
   padding-left: 20px;
   width: 348px;
 }
-
 .menu h2::after {
   display: block;
   padding-top: 4px;
@@ -798,36 +844,31 @@ header button {
   content: "";
   width: 40px;
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .menu h2 {
     background-color: #f6f6f6;
     padding-bottom: 15px;
   }
 }
-
 @media screen and (min-width: 961px) {
   .menu h2 {
     background-color: #f6f6f6;
     padding-bottom: 15px;
   }
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .menu {
     width: 52%;
   }
 }
-
 @media screen and (min-width: 961px) {
   .menu {
     width: 50%;
   }
 }
-
 .menu li {
   list-style-type: none;
-  background-color: #ffff;
+  background-color: white;
   border-radius: 16px;
   margin: 14px 16px;
   box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
@@ -839,33 +880,25 @@ header button {
   transition-duration: 400ms;
   width: 348px;
 }
-
 .menu li:hover {
-  box-shadow: 0px 7px 15px 0px #0000003b;
-}
-
-.menu li:hover .price-check {
-  margin-right: 0px;
+  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.231372549);
 }
 
 .menu li div:first-child {
   overflow: hidden;
   white-space: nowrap;
 }
-
 .menu li h3 {
   text-overflow: ellipsis;
   overflow: hidden;
   padding: 14px 0 0 11px;
 }
-
 .menu li p {
   text-overflow: ellipsis;
   overflow: hidden;
   padding: 3px 0 11px 11px;
   font-size: 0.95rem;
 }
-
 .menu li .price-check {
   display: flex;
   flex-flow: row;
@@ -873,7 +906,6 @@ header button {
   margin-right: -61px;
   transition: 500ms;
 }
-
 .menu li .price-check p {
   align-self: flex-end;
   margin-right: 25px;
@@ -881,27 +913,19 @@ header button {
   font-weight: 900;
   line-height: 1rem;
 }
-
 .menu li .price-check i {
   align-self: center;
   background-color: #99E2D0;
   padding: 11px 4px;
 }
-
 .menu li .price-check i:before {
   font-size: 1.05rem;
-  color: #ffff;
+  color: white;
   display: inline-block;
   margin: 15px;
   transition-duration: 0ms;
   transform: rotate(-1turn);
 }
-
-.menu li:hover i:before {
-  transform: rotate(0turn);
-  transition-duration: 500ms;
-}
-
 .menu article {
   display: flex;
   flex-flow: column;
@@ -910,21 +934,18 @@ header button {
 
 footer {
   background-color: #353535;
-  color: #ffff;
+  color: white;
   padding: 25px 20px 30px 20px;
 }
-
 footer h4 {
-  color: #ffff;
+  color: white;
   font-family: Shrikhand;
   margin-bottom: 10px;
   font-weight: 100;
 }
-
 footer ul {
   list-style-type: none;
 }
-
 @media screen and (min-width: 961px) {
   footer ul {
     display: flex;
@@ -932,7 +953,6 @@ footer ul {
     justify-content: flex-start;
   }
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   footer ul {
     display: flex;
@@ -940,7 +960,6 @@ footer ul {
     justify-content: flex-start;
   }
 }
-
 footer ul li {
   font-size: 1rem;
   padding-top: 8px;
@@ -949,7 +968,6 @@ footer ul li {
   color: white;
   cursor: pointer;
 }
-
 @media screen and (min-width: 961px) {
   footer ul li {
     margin-right: 20px;
@@ -958,7 +976,6 @@ footer ul li {
     padding-top: 0;
   }
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   footer ul li {
     margin-right: 20px;
@@ -967,30 +984,24 @@ footer ul li {
     padding-top: 0;
   }
 }
-
 footer ul li:last-child {
   border-right: none;
 }
-
 footer ul li:first-child, footer ul li:nth-child(2) {
   font-weight: 400;
 }
-
 footer ul i {
   padding-right: 5px;
 }
-
 footer ul i::before {
   font-size: 0.85rem;
 }
-
 footer ul li:first-child i {
   margin-right: 8px;
 }
-
 footer a {
   text-decoration: none;
-  color: #ffff;
+  color: white;
 }
 
 header {
@@ -998,11 +1009,10 @@ header {
   font-family: "Shrikhand", sans-serif;
   text-align: center;
   font-size: 1.8rem;
-  background-color: #ffff;
+  background-color: white;
   padding-top: 15px;
   padding-bottom: 6px;
 }
-
 @media screen and (min-width: 961px) {
   header {
     box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
@@ -1013,7 +1023,6 @@ header {
     z-index: 1;
   }
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   header {
     box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
@@ -1027,63 +1036,60 @@ header {
   text-align: center;
   background-color: #eaeaea;
   box-shadow: inset 0 4px 9px -7px rgba(0, 0, 0, 0.7);
+  position: relative;
 }
-
 @media screen and (min-width: 961px) {
   .search-form {
     order: 2;
     width: 300px;
     border-radius: 15px;
     margin-left: 95px;
-    background-color: #ffff;
+    background-color: white;
     border: 1px solid #eaeaea;
     margin-bottom: 0px;
     box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
   }
 }
-
 @media screen and (min-width: 760px) and (max-width: 960px) {
   .search-form {
     box-shadow: unset;
   }
 }
-
 .search-form input {
   border: none;
   background-color: #eaeaea;
   padding: 0 10px;
   width: 150px;
 }
-
 @media screen and (min-width: 961px) {
   .search-form input {
-    background-color: #ffff;
+    background-color: white;
   }
 }
-
 .search-form input:focus {
   outline: none;
   font-size: 1rem;
   font-weight: 700;
   color: #353535;
 }
-
 .search-form input:focus::placeholder {
   opacity: 0;
+  -webkit-transition: opacity 0.35s ease-in-out;
   transition: opacity 0.35s ease-in-out;
 }
-
+.search-form input:focus + .search-form-bubble {
+  opacity: 1;
+  transition: all 300ms;
+}
 .search-form input:hover::placeholder {
   opacity: 20%;
   transition-duration: 0.4s;
 }
-
 .search-form i {
   font-size: 1rem;
   color: #353535;
   vertical-align: 0.1rem;
 }
-
 @media screen and (min-width: 961px) {
   .search-form i {
     color: #9356DC;

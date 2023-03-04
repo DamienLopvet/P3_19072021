@@ -1,60 +1,77 @@
-.search-form{
-   padding: 15px 0; 
-   text-align: center;
-   background-color: $color-bck-grd-dark;
-   box-shadow: $head-shade;
-   @include largeScreen{
-       order: 2;
-       width: 300px;
-       border-radius: 15px;
-       margin-left: 95px;
-       background-color: $color-white;
-       border: 1px solid $color-bck-grd-dark;
-       margin-bottom: 0px;
-       box-shadow: $box-shade;
-       
-   }
-   @include mediumScreen{
-       box-shadow: unset;
-       
-   }
-    & input{
-        border:none;
+.search-form {
+    padding: 15px 0;
+    text-align: center;
+    background-color: $color-bck-grd-dark;
+    box-shadow: $head-shade;
+    position: relative;
+
+    @include largeScreen {
+        order: 2;
+        width: 300px;
+        border-radius: 15px;
+        margin-left: 95px;
+        background-color: $color-white;
+        border: 1px solid $color-bck-grd-dark;
+        margin-bottom: 0px;
+        box-shadow: $box-shade;
+
+    }
+
+    @include mediumScreen {
+        box-shadow: unset;
+
+    }
+
+    & input {
+        border: none;
         background-color: $color-bck-grd-dark;
         padding: 0 10px;
         width: 150px;
-        @include largeScreen{
+
+        @include largeScreen {
             background-color: $color-white;
         }
 
-        &:focus{
+        &:focus {
             outline: none;
             @include p-bold;
-        &::placeholder{
-            opacity: 0;
-            -webkit-transition: opacity 0.35s ease-in-out;
-            transition: opacity 0.35s ease-in-out;
+
+            &::placeholder {
+                opacity: 0;
+                -webkit-transition: opacity 0.35s ease-in-out;
+                transition: opacity 0.35s ease-in-out;
+            }
         }
+
+        &:focus+.search-form-bubble {
+            opacity: 1;
+            transition: all 300ms;
         }
-    
-    &:hover::placeholder{
-        opacity: 20%;
-        transition-duration: 0.4s; 
-        
+
+        &:hover::placeholder {
+            opacity: 20%;
+            transition-duration: 0.4s;
+
+        }
+
     }
-}
-    & i{
+
+    & i {
         font-size: 1rem;
         color: $color-fourthary;
         vertical-align: 0.1rem;
-        @include largeScreen{
+
+        @include largeScreen {
             color: $color-primary;
             font-size: 1.2rem;
         }
     }
+
+    
+
 }
-input::placeholder{
+
+input::placeholder {
     @include p-bold;
     transition: opacity 0.35s ease-in-out;
 }
-   
