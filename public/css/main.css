@@ -208,6 +208,22 @@ article li:nth-child(4n) {
     transform: translateY(0px);
   }
 }
+.bubbleInfo {
+  opacity: 0;
+  translate: 0 -20px;
+  animation: bubbleAnimate 400ms forwards;
+}
+
+@keyframes bubbleAnimate {
+  from {
+    opacity: 0;
+    translate: 0 -20px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0px;
+  }
+}
 .heartsecond {
   font-size: 1.35rem;
   transform: scaleY(1.02);
@@ -223,7 +239,7 @@ article li:nth-child(4n) {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  z-index: -1;
+  z-index: 2;
   opacity: 0;
   transition: 600ms;
 }
@@ -241,7 +257,8 @@ article li:nth-child(4n) {
 .heartfirst:hover {
   color: #f6f6f6;
 }
-.heartfirst:hover .heartsecond {
+
+.heartActive {
   opacity: 1;
   z-index: 2;
 }
@@ -883,7 +900,9 @@ header button {
 .menu li:hover {
   box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.231372549);
 }
-
+.menu li:hover .price-check {
+  margin-right: 0px;
+}
 .menu li div:first-child {
   overflow: hidden;
   white-space: nowrap;

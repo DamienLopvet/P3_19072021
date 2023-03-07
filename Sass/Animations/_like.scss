@@ -13,7 +13,7 @@
     -webkit-background-clip: text; 
             background-clip: text;
     -webkit-text-fill-color: transparent;
-    z-index: -1;
+    z-index: 2;
     opacity: 0;
     transition: 600ms;
 }
@@ -28,8 +28,9 @@
    color: $color-fourthary;
    &:hover{
        color: $color-bck-grd-light;
-   & .heartsecond{
-    opacity: 1;
-    z-index: 2; 
-   }}
+   }
+}
+.heartActive{
+    opacity:1;
+    z-index: 2;
 }
